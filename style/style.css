@@ -2,6 +2,15 @@
     margin: 0;
 }
 
+body {
+    background-color: slategrey;
+    color: white;
+}
+
+body > * {
+    margin: 10px;
+}
+
 header {
     text-align: center;
 }
@@ -12,8 +21,8 @@ main {
     align-items: center;
 }
 
-footer {
-    margin: 5px;
+#myCanvas {
+    background-color: white;
 }
 
 #myCanvas.index {

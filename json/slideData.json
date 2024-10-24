@@ -1,0 +1,14 @@
+[
+    {
+        "slideName":"Title Slide",
+        "slideType":"default",
+        "slideElements": [
+            {
+                "type":"text",
+                "text":"The Bombing of Japan",
+                "xPos":0,
+                "yPos":0
+            }
+        ]
+    }
+]
