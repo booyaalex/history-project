@@ -65,7 +65,7 @@ function update() {
 }
 
 async function getSlideshowData() {
-    const response = await fetch("../json/slideData.json");
+    const response = await fetch("json/slideData.json");
     const JSON = await response.json();
     console.log(JSON);
 
