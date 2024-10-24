@@ -1,13 +1,104 @@
 [
     {
-        "slideName":"Title Slide",
-        "slideType":"default",
+        "slideName": "The Best History Project",
+        "slideType": "default",
         "slideElements": [
             {
-                "type":"text",
-                "text":"The Bombing of Japan",
-                "xPos":0,
-                "yPos":0
+                "type": "text",
+                "text": "The Bombing of Japan",
+                "xPos": 0,
+                "yPos": 100,
+                "size": 80,
+                "modifiers": [
+                    "h-center"
+                ]
+            }
+        ]
+    },
+    {
+        "slideName": "WW2 Overview",
+        "slideType": "default",
+        "slideElements": [
+            {
+                "type": "text",
+                "text": "WW2 Overview",
+                "xPos": 50,
+                "yPos": 100,
+                "size": 60,
+                "modifiers": []
+            }
+        ]
+    },
+    {
+        "slideName": "Question",
+        "slideType": "default",
+        "slideElements": [
+            {
+                "type": "text",
+                "text": "How do we Stop Japan?",
+                "xPos": 50,
+                "yPos": 0,
+                "size": 0,
+                "modifiers": [
+                    "h-center",
+                    "v-center"
+                ]
+            }
+        ]
+    },
+    {
+        "slideName": "Potsdam Declaration",
+        "slideType": "default",
+        "slideElements": [
+            {
+                "type": "text",
+                "text": "The Potsdam Declaration",
+                "xPos": 50,
+                "yPos": 100,
+                "size": 60,
+                "modifiers": []
+            }
+        ]
+    },
+    {
+        "slideName": "509th Composite Group",
+        "slideType": "default",
+        "slideElements": [
+            {
+                "type": "text",
+                "text": "The 509th Composite Group",
+                "xPos": 50,
+                "yPos": 100,
+                "size": 60,
+                "modifiers": []
+            }
+        ]
+    },
+    {
+        "slideName": "Hiroshima Bombing 1",
+        "slideType": "default",
+        "slideElements": [
+            {
+                "type": "text",
+                "text": "Hiroshima Bombing",
+                "xPos": 50,
+                "yPos": 100,
+                "size": 60,
+                "modifiers": []
+            }
+        ]
+    },
+    {
+        "slideName": "Hiroshima Bombing 2",
+        "slideType": "default",
+        "slideElements": [
+            {
+                "type": "text",
+                "text": "Hiroshima Bombing",
+                "xPos": 50,
+                "yPos": 100,
+                "size": 60,
+                "modifiers": []
             }
         ]
     }
