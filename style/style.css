@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+}
+
+#myCanvas.index {
+    width: 90vw;
+    height: 85vh;
+}
+#myCanvas.slideshow {
+    width: 100vw;
+    height: 100vh;
+}
