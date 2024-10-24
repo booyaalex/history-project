@@ -1,6 +1,5 @@
 let current_slide = 5;
 let slide_data_array = [];
-var test = 0;
 
 const firebaseConfig = {
     apiKey: "AIzaSyDspsa0eeswdZX91YWGg3uygsxmgiqvhd8",
