@@ -20,12 +20,7 @@ db.ref("/Slide").on("value", function (snapshot) {
 
 window.onload = function () {
     //Define Canvas
-    board = document.getElementById("myCanvas");
-    ctx = board.getContext("2d");
-    window.devicePixelRatio = 8;
-    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-    board.width = Math.floor(board.width * window.devicePixelRatio);
-    board.height = Math.floor((board.width / Math.abs(-2.5)));
+    
 };
 
 function updateSlide() {
@@ -98,4 +93,11 @@ async function getSlideshowData() {
 
     slide_data_array = JSON;
 }
-getSlideshowData();
+getSlideshowData().then(() => {
+    board = document.getElementById("myCanvas");
+    ctx = board.getContext("2d");
+    window.devicePixelRatio = 8;
+    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+    board.width = Math.floor(board.width * window.devicePixelRatio);
+    board.height = Math.floor((board.width / Math.abs(-2.5)));
+});
