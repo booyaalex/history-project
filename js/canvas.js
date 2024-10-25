@@ -14,8 +14,8 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
 window.onload = function () {
-    //Define Canvas
-    
+
+
 };
 
 function updateSlide() {
@@ -36,6 +36,7 @@ function updateSlide() {
                 y: element.yPos,
                 size: element.size
             };
+            console.log(`Value: ${text.value}, xPos: ${text.x}, yPos: ${text.y}, size: ${text.size}`);
 
             //Modifiers
             if (element.modifiers.includes("h-center")) {
@@ -48,9 +49,8 @@ function updateSlide() {
             console.log(ctx.measureText(text.value));
 
             //Display Element
-            console.log(`Value: ${text.value}, xPos: ${text.x}, yPos: ${text.y}, size: ${text.size}`);
             ctx.font = `${text.size}px arial`;
-            
+
             ctx.fillText(text.value, text.x, text.y);
         }
 
@@ -66,7 +66,7 @@ function updateSlide() {
             };
 
             //Modifiers
-            if(element.modifiers.includes("h-center")) {
+            if (element.modifiers.includes("h-center")) {
                 image.x = (board.width / 2) - (image.width / 2);
             }
 
@@ -89,6 +89,7 @@ async function getSlideshowData() {
     slide_data_array = JSON;
 }
 getSlideshowData().then(() => {
+    //Define Canvas
     board = document.getElementById("myCanvas");
     ctx = board.getContext("2d");
     window.devicePixelRatio = 8;
