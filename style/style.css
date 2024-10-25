@@ -40,6 +40,8 @@ footer {
 #audienceParticipationInput > * {
     height: 50px;
     font-size: 30px;
+    border-radius: 10px;
+    border: none;
 }
 #audienceParticipationInput.slideshow {
     max-height: 0;
