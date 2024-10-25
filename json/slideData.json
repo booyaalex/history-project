@@ -33,11 +33,24 @@
         "slideElements": [
             {
                 "type": "text",
-                "text": "WW2 Overview",
+                "text": "Bullet Point Testing Slide",
                 "xPos": 50,
                 "yPos": 100,
                 "size": 60,
                 "modifiers": []
+            },
+            {
+                "type": "bullets",
+                "list": [
+                    "Fisrt Bullet",
+                    "Second One"
+                ],
+                "xPos": 50,
+                "yPos": 100,
+                "size": 60,
+                "spacing": 5,
+                "bulletType": "circle",
+                "width": 100
             }
         ]
     },

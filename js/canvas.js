@@ -75,6 +75,44 @@ function updateSlide() {
                 ctx.drawImage(imageElement, image.x, image.y, image.width, image.height);
             };
         }
+
+        //Bullet Points
+        if (element.type == "bullets") {
+            //Define Values
+            let bullets = {
+                list: element.list,
+                x: element.xPos,
+                y: element.yPos, //xPos & yPos of first bullet.
+                size: element.size,
+                width: element.width,
+                spacing: element.spacing,
+                type: element.bulletType
+            };
+            
+            const bulletsArray = [];
+            for(let i = 0; i < bullets.list.length; i++) {
+                let words = bullets.list[i].split(" ");
+                let lines = [];
+                let currentLine = words[0];
+    
+                for (let j = 1; j < words.length; j++) {
+                    let word = words[j];
+                    let width = ctx.measureText(currentLine + " " + word).width;
+                    if (width < bullets.width) {
+                        currentLine += " " + word;
+                    } else {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    }
+                }
+                lines.push(currentLine);
+
+                bulletsArray.push(lines);
+            }
+            console.log(bulletsArray);
+
+            //Display Element
+        }
     }
 }
 
