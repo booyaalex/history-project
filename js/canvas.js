@@ -13,11 +13,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
-window.onload = function () {
-
-
-};
-
 function updateSlide() {
     ctx.clearRect(0, 0, board.width, board.height);
     const current_slide_data = slide_data_array[current_slide];
@@ -36,7 +31,7 @@ function updateSlide() {
                 y: element.yPos,
                 size: element.size
             };
-            console.log(`Value: ${text.value}, xPos: ${text.x}, yPos: ${text.y}, size: ${text.size}`);
+            ctx.font = `${text.size}px arial`;
 
             //Modifiers
             if (element.modifiers.includes("h-center")) {
@@ -46,11 +41,10 @@ function updateSlide() {
                 text.y = (board.height / 2) - (ctx.measureText(text.value).actualBoundingBoxAscent + ctx.measureText(text.value).actualBoundingBoxDescent) / 2;
             }
 
+            console.log(`Value: ${text.value}, xPos: ${text.x}, yPos: ${text.y}, size: ${text.size}`);
             console.log(ctx.measureText(text.value));
 
             //Display Element
-            ctx.font = `${text.size}px arial`;
-
             ctx.fillText(text.value, text.x, text.y);
         }
 
