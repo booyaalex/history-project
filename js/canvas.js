@@ -72,6 +72,7 @@ function update() {
             
 
             const imageElement = new Image();
+            imageElement.src = image.src;
             //drawImage(imageElement, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
             ctx.drawImage(imageElement, 0, 0, 100, 100);
         }
