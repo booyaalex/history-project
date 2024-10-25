@@ -69,8 +69,11 @@ function update() {
                 y: element.yPos,
                 size: element.size,
             };
-            //drawImage(image.src, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
-            ctx.drawImage(image.src, 0, 0, 100, 100);
+            
+
+            const imageElement = new Image();
+            //drawImage(imageElement, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+            ctx.drawImage(imageElement, 0, 0, 100, 100);
         }
     }
 }
