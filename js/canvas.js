@@ -67,14 +67,17 @@ function update() {
                 src: element.src,
                 x: element.xPos,
                 y: element.yPos,
-                size: element.size,
+                width: element.width,
+                height: element.height
             };
             
 
             const imageElement = new Image();
             imageElement.src = image.src;
             //drawImage(imageElement, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
-            ctx.drawImage(imageElement, 0, 0, 100, 100);
+            imageElement.onload = function () {
+                ctx.drawImage(imageElement, image.x, image.y, image.width, image.height);
+            };
         }
     }
 }
