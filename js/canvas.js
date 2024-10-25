@@ -124,7 +124,7 @@ function updateSlide() {
                 for(let j = 0; j < bulletsArray[i].length; j++) {
                     height = 0;
                     console.log(bulletsArray[i][j]);
-                    ctx.fillText(bulletsArray[i][j], bullets.x + bulletSpace * 1.5, 100);
+                    ctx.fillText(bulletsArray[i][j], 100, currentYPos);
                     //ctx.fillText(bulletsArray[i][j], bullets.x + bulletSpace * 1.5, currentYPos + height);
                     height += (ctx.measureText(bulletsArray[i][j]).actualBoundingBoxAscent + ctx.measureText(bulletsArray[i][j]).actualBoundingBoxDescent);
                 }
