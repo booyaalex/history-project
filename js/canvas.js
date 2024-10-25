@@ -128,7 +128,7 @@ function updateSlide() {
                     //ctx.fillText(bulletsArray[i][j], bullets.x + bulletSpace * 1.5, currentYPos + height);
                     height += (ctx.measureText(bulletsArray[i][j]).actualBoundingBoxAscent + ctx.measureText(bulletsArray[i][j]).actualBoundingBoxDescent);
                 }
-                currentYPos += height + spacing;
+                currentYPos += height + bullets.spacing;
             }
         }
     }
