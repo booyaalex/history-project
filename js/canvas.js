@@ -57,6 +57,8 @@ function updateSlide() {
                 text.y = (board.height / 2) - (ctx.measureText(text.value).actualBoundingBoxAscent + ctx.measureText(text.value).actualBoundingBoxDescent) / 2;
             }
 
+            console.log(ctx.measureText(text.value));
+
             //Display Element
             console.log(`Value: ${text.value}, xPos: ${text.x}, yPos: ${text.y}, size: ${text.size}`);
             ctx.font = `${text.size}px arial`;
@@ -97,5 +99,6 @@ async function getSlideshowData() {
     console.log(JSON);
 
     slide_data_array = JSON;
+    updateSlide();
 }
 getSlideshowData();
