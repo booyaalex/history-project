@@ -70,7 +70,7 @@ function update() {
                 size: element.size,
             };
             //drawImage(image.src, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
-            drawImage(image.src, 0, 0, 100, 100);
+            ctx.drawImage(image.src, 0, 0, 100, 100);
         }
     }
 }
