@@ -41,9 +41,6 @@ function updateSlide() {
                 text.y = (board.height / 2) - (ctx.measureText(text.value).actualBoundingBoxAscent + ctx.measureText(text.value).actualBoundingBoxDescent) / 2;
             }
 
-            console.log(`Value: ${text.value}, xPos: ${text.x}, yPos: ${text.y}, size: ${text.size}`);
-            console.log(ctx.measureText(text.value));
-
             //Display Element
             ctx.fillText(text.value, text.x, text.y);
         }

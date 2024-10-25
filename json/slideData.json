@@ -12,6 +12,17 @@
                 "modifiers": [
                     "h-center"
                 ]
+            },
+            {
+                "type": "image",
+                "src": "https://i.redd.it/45qcleeuzqay.jpg",
+                "xPos": 0,
+                "yPos": 100,
+                "width": 300,
+                "height": 300,
+                "modifiers": [
+                    "h-center"
+                ]
             }
         ]
     },
