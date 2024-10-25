@@ -10,14 +10,25 @@ const secondFirebaseConfig = {
 firebase.initializeApp(secondFirebaseConfig);
 const db = firebase.database();
 
+var current_slide = 0;
+
+db.ref("/Slide").on("value", function (snapshot) {
+    current_slide = snapshot.val().slide;
+    if(current_slide <= -1) {
+        db.ref("/Slide").update({
+            slide: 0
+        });
+    }
+});
+
 function slideForward() {
     db.ref("/Slide").update({
-        slide: 0
+        slide: current_slide++
     });
 }
 
 function slideBackward() {
     db.ref("/Slide").update({
-        slide: 1
+        slide: current_slide--
     });
 }
