@@ -15,6 +15,7 @@ const db = firebase.database();
 
 db.ref("/Slide").on("value", function (snapshot) {
     current_slide = snapshot.val().slide;
+    updateSlide();
 });
 
 window.onload = function () {
@@ -26,11 +27,10 @@ window.onload = function () {
     board.width = Math.floor(board.width * window.devicePixelRatio);
     board.height = Math.floor((board.width / Math.abs(-2.5)));
     //Update Slideshow
-    requestAnimationFrame(update);
+    updateSlide();
 };
 
-function update() {
-    requestAnimationFrame(update);
+function updateSlide() {
     ctx.clearRect(0, 0, board.width, board.height);
     const current_slide_data = slide_data_array[current_slide];
 
