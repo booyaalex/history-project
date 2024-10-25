@@ -33,8 +33,19 @@ footer {
 #myCanvas.slideshow {
     width: 100vw;
 }
+
+#audienceParticipationInput {
+    margin: 10px;
+    height: 50px;
+    font-size: 30px;
+}
 #audienceParticipationInput.slideshow {
     max-height: 0;
+    visibility: hidden;
+}
+#questionInput {
+    width: 75vw;
+    border-radius: 10px;
 }
 
 .beeg {

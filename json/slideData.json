@@ -48,8 +48,8 @@
             {
                 "type": "text",
                 "text": "How do we Stop Japan?",
-                "xPos": 50,
-                "yPos": 0,
+                "xPos": 0,
+                "yPos": 50,
                 "size": 100,
                 "modifiers": [
                     "h-center"
