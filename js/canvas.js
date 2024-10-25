@@ -13,11 +13,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
-db.ref("/Slide").on("value", function (snapshot) {
-    current_slide = snapshot.val().slide;
-    updateSlide();
-});
-
 window.onload = function () {
     //Define Canvas
     
@@ -100,4 +95,11 @@ getSlideshowData().then(() => {
     ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
     board.width = Math.floor(board.width * window.devicePixelRatio);
     board.height = Math.floor((board.width / Math.abs(-2.5)));
+
+    updateSlides();
+});
+
+db.ref("/Slide").on("value", function (snapshot) {
+    current_slide = snapshot.val().slide;
+    updateSlide();
 });
