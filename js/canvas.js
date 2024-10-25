@@ -51,13 +51,16 @@ function updateSlide() {
 
             //Modifiers
             if (element.modifiers.includes("h-center")) {
-                text.x = (board.width / 2) - ctx.measureText(text.value).width / 2;
+                text.x = (board.width / 2) - (ctx.measureText(text.value).width / 2);
             }
             if (element.modifiers.includes("v-center")) {
                 text.y = (board.height / 2) - (ctx.measureText(text.value).actualBoundingBoxAscent + ctx.measureText(text.value).actualBoundingBoxDescent) / 2;
             }
+
             //Display Element
+            console.log(`Value: ${text.value}, xPos: ${text.x}, yPos: ${text.y}, size: ${text.size}`);
             ctx.font = `${text.size}px arial`;
+            
             ctx.fillText(text.value, text.x, text.y);
         }
 
