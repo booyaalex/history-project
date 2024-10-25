@@ -72,7 +72,7 @@ function update() {
             };
             
 
-            const imageElement = new Image();
+            const imageElement = new Image(image.width, image.height);
             imageElement.src = image.src;
             //drawImage(imageElement, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
             imageElement.onload = function () {
