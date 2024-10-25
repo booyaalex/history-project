@@ -36,6 +36,8 @@ footer {
 
 #audienceParticipationInput {
     margin: 10px;
+}
+#audienceParticipationInput > * {
     height: 50px;
     font-size: 30px;
 }
