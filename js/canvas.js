@@ -88,7 +88,9 @@ function updateSlide() {
                 spacing: element.spacing,
                 type: element.bulletType
             };
-            
+            let currentYPos = bullets.yPos;
+
+            //Text Wrap
             const bulletsArray = [];
             for(let i = 0; i < bullets.list.length; i++) {
                 let words = bullets.list[i].split(" ");
@@ -112,6 +114,18 @@ function updateSlide() {
             console.log(bulletsArray);
 
             //Display Element
+            ctx.font = `${text.size}px arial`;
+
+            const bulletSpace = ctx.measureText("•").width;
+            for(let i = 0; i < bulletsArray.length; i++) {
+                ctx.fillText("•", bullets.x, currentYPos);
+                for(let j = 0; j < bulletsArray[i].length; j++) {
+                    let height = 0;
+                    ctx.fillText(bulletsArray[i][j], bullets.x + bulletSpace * 1.5, currentYPos + height);
+                    height += (ctx.measureText(bulletsArray[i][j]).actualBoundingBoxAscent + ctx.measureText(bulletsArray[i][j]).actualBoundingBoxDescent);
+                }
+                currentYPos += height;
+            }
         }
     }
 }
