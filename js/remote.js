@@ -14,21 +14,21 @@ var current_slide = 0;
 
 db.ref("/Slide").on("value", function (snapshot) {
     current_slide = snapshot.val().slide;
-    if(current_slide <= -1) {
-        db.ref("/Slide").update({
-            slide: 0
-        });
-    }
 });
 
 function slideForward() {
+    current_slide++;
     db.ref("/Slide").update({
-        slide: current_slide++
+        slide: current_slide
     });
 }
 
 function slideBackward() {
+    current_slide--;
+    if(current_slide <= -1) {
+        current_slide = 0;
+    }
     db.ref("/Slide").update({
-        slide: current_slide--
+        slide: current_slide
     });
 }
