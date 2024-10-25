@@ -46,10 +46,8 @@ function updateSlide() {
                 value: element.text,
                 x: element.xPos,
                 y: element.yPos,
-                size: element.size,
+                size: element.size
             };
-            //Font Size
-            ctx.font = `${text.size}px arial`;
 
             //Modifiers
             if (element.modifiers.includes("h-center")) {
@@ -58,11 +56,14 @@ function updateSlide() {
             if (element.modifiers.includes("v-center")) {
                 text.y = (board.height / 2) - (ctx.measureText(text.value).actualBoundingBoxAscent + ctx.measureText(text.value).actualBoundingBoxDescent) / 2;
             }
+            //Display Element
+            ctx.font = `${text.size}px arial`;
             ctx.fillText(text.value, text.x, text.y);
         }
 
         //Image Elements
         if (element.type == "image") {
+            //Define Values
             let image = {
                 src: element.src,
                 x: element.xPos,
@@ -70,8 +71,13 @@ function updateSlide() {
                 width: element.width,
                 height: element.height
             };
-            
 
+            //Modifiers
+            if(element.modifiers.includes("h-center")) {
+                image.x = (board.width / 2) - (image.width / 2);
+            }
+
+            //Display Element
             const imageElement = new Image(image.width, image.height);
             imageElement.src = image.src;
             //drawImage(imageElement, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
