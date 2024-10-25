@@ -26,8 +26,6 @@ window.onload = function () {
     ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
     board.width = Math.floor(board.width * window.devicePixelRatio);
     board.height = Math.floor((board.width / Math.abs(-2.5)));
-    //Update Slideshow
-    updateSlide();
 };
 
 function updateSlide() {
@@ -99,6 +97,5 @@ async function getSlideshowData() {
     console.log(JSON);
 
     slide_data_array = JSON;
-    updateSlide();
 }
 getSlideshowData();
