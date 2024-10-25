@@ -46,7 +46,7 @@
                     "Second One"
                 ],
                 "xPos": 50,
-                "yPos": 100,
+                "yPos": 200,
                 "size": 60,
                 "spacing": 5,
                 "bulletType": "circle",

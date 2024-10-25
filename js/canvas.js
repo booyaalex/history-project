@@ -117,6 +117,7 @@ function updateSlide() {
             ctx.font = `${bullets.size}px arial`;
 
             const bulletSpace = ctx.measureText("•").width;
+            console.log(`Bullet Space: ${bulletSpace}`);
             for(let i = 0; i < bulletsArray.length; i++) {
                 ctx.fillText("•", bullets.x, currentYPos);
                 let height = 0;
