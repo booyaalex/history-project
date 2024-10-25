@@ -95,3 +95,4 @@ db.ref("/Slide").on("value", function (snapshot) {
     current_slide = snapshot.val().slide;
     updateSlide();
 });
+
