@@ -60,6 +60,18 @@ function update() {
             }
             ctx.fillText(text.value, text.x, text.y);
         }
+
+        //Image Elements
+        if (element.type == "image") {
+            let image = {
+                src: element.src,
+                x: element.xPos,
+                y: element.yPos,
+                size: element.size,
+            };
+            //drawImage(image.src, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+            drawImage(image.src, 0, 0, 100, 100);
+        }
     }
 }
 
