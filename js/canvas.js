@@ -88,7 +88,7 @@ function updateSlide() {
                 spacing: element.spacing,
                 type: element.bulletType
             };
-            let currentYPos = bullets.yPos;
+            let currentYPos = bullets.y;
 
             //Text Wrap
             const bulletsArray = [];
@@ -150,7 +150,7 @@ getSlideshowData().then(() => {
     board.width = Math.floor(board.width * window.devicePixelRatio);
     board.height = Math.floor((board.width / Math.abs(-2.5)));
 
-    updateSlides();
+    updateSlide();
 });
 
 db.ref("/Slide").on("value", function (snapshot) {
