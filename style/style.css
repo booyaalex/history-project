@@ -33,6 +33,9 @@ footer {
 #myCanvas.slideshow {
     width: 100vw;
 }
+#audienceParticipationInput.slideshow {
+    max-height: 0;
+}
 
 .beeg {
     width: 90vw;

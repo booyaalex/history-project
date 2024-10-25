@@ -21,7 +21,8 @@
                 "width": 300,
                 "height": 300,
                 "modifiers": [
-                    "h-center"
+                    "h-center",
+                    "v-center"
                 ]
             }
         ]
@@ -42,7 +43,7 @@
     },
     {
         "slideName": "Question",
-        "slideType": "default",
+        "slideType": "question",
         "slideElements": [
             {
                 "type": "text",
@@ -51,8 +52,7 @@
                 "yPos": 0,
                 "size": 100,
                 "modifiers": [
-                    "h-center",
-                    "v-center"
+                    "h-center"
                 ]
             }
         ]

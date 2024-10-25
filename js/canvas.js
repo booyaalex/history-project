@@ -14,11 +14,14 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
 function updateSlide() {
+    const INPUT_BOX_DIV = document.getElementById("audienceParticipationInput");
+    INPUT_BOX_DIV.innerHTML = "";
+
     ctx.clearRect(0, 0, board.width, board.height);
     const current_slide_data = slide_data_array[current_slide];
 
-    if (current_slide_data.slideType != "default") {
-
+    if (current_slide_data.slideType == "question") {
+        INPUT_BOX_DIV.innerHTML = '<input id="questionInput" type="text" placeholder="Type in Your Answer Here"><button id="submitButton" type="submit">Submit</button>';
     }
     for (let i = 0; i < current_slide_data.slideElements.length; i++) {
         const element = current_slide_data.slideElements[i];
@@ -59,6 +62,9 @@ function updateSlide() {
             //Modifiers
             if (element.modifiers.includes("h-center")) {
                 image.x = (board.width / 2) - (image.width / 2);
+            }
+            if (element.modifiers.includes("v-center")) {
+                image.y = (board.height / 2) - (image.height / 2);
             }
 
             //Display Element
