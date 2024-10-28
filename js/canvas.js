@@ -146,7 +146,8 @@ function updateSlide() {
                 x: element.xPos,
                 y: element.yPos,
                 width: element.width,
-                height: element.height
+                height: element.height,
+                size: element.size
             };
             const responseArray = [];
             //Get Responses
@@ -154,13 +155,17 @@ function updateSlide() {
                 ctx.fillStyle = "white";
                 ctx.fillRect(response.x, response.y - 50, response.width, response.height);
                 ctx.fillStyle = "black";
+
+                let i = 0;
                 snapshot.forEach((r) => {
                     console.log(r.val().accepted);
                     if(r.val().accepted == 1) {
                         responseArray.push(r.val().response);
                         console.log(r.val().response);
-                        ctx.fillText(r.val().response, response.x, response.y);
+                        ctx.font = `${response.size}px arial`;
+                        ctx.fillText(`${r.val().funName}: ${r.val().response}`, response.x, response.y + (i * 40));
                     }
+                    i++;
                 });
             });
         }
@@ -170,9 +175,13 @@ function updateSlide() {
 function submitAnswer() {
     const text_box = document.getElementById("questionInput");
     const user_id = sessionStorage.getItem("temp_id");
+
+    let temp = profanityCleaner.clean(text_box.value, { placeholder: '°' });
+
     db.ref("/UserResponses").child(slide_data_array[current_slide].slideName).child(user_id.toString()).update({
-        response: text_box.value,
-        accepted: 1
+        response: temp,
+        accepted: 1,
+        funName: createFunName()
     });
 }
 
@@ -200,3 +209,9 @@ db.ref("/Slide").on("value", function (snapshot) {
     updateSlide();
 });
 
+function createFunName() {
+    const firstName = ["Super", "Marvelous", "Charged", "Swirly", 'Zealous', "Light", "Lucky", "Mr.", "Mrs."];
+    const lastName = ["Cactus", "Doggo", "Duck", "Flame", "Artist", "Tiger", "Warden", "Dancer", "Brekker"];
+
+    return `${firstName[Math.floor(Math.random() * 9)]} ${lastName[Math.floor(Math.random() * 9)]}`;
+}

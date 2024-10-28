@@ -90,13 +90,21 @@
                 "width": 700
             },
             {
+                "type": "text",
+                "text": "Responses:",
+                "xPos": 1000,
+                "yPos": 275,
+                "size": 70,
+                "modifiers": []
+            },
+            {
                 "type": "response",
                 "parent": "Question 1",
                 "xPos": 800,
-                "yPos": 200,
+                "yPos": 350,
                 "width": 1500,
-                "height": 800,
-                "size": 20
+                "height": 750,
+                "size": 45
             }
         ]
     },
