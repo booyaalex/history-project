@@ -17,3 +17,4 @@
     |☑| Shrink buttons
     | | Have a space to accept/reject responses
         | | Make sure only current slide responses show up
+| | Do something other than sessionStorage
