@@ -49,13 +49,13 @@
                 "yPos": 200,
                 "size": 60,
                 "spacing": 5,
-                "bulletType": "circle",
+                "bulletType": "arrow",
                 "width": 600
             }
         ]
     },
     {
-        "slideName": "Question",
+        "slideName": "Question 1",
         "slideType": "question",
         "slideElements": [
             {
@@ -67,6 +67,36 @@
                 "modifiers": [
                     "h-center"
                 ]
+            },
+            {
+                "type": "text",
+                "text": "Directions",
+                "xPos": 50,
+                "yPos": 275,
+                "size": 70,
+                "modifiers": []
+            },
+            {
+                "type": "bullets",
+                "list": [
+                    "Type your response in the text box on your screen.",
+                    "Press the submit button when you are done."
+                ],
+                "xPos": 50,
+                "yPos": 350,
+                "size": 60,
+                "spacing": 50,
+                "bulletType": "circle",
+                "width": 700
+            },
+            {
+                "type": "response",
+                "parent": "Question 1",
+                "xPos": 800,
+                "yPos": 200,
+                "width": 1500,
+                "height": 800,
+                "size": 20
             }
         ]
     },

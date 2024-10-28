@@ -1,0 +1,19 @@
+|☑| Different bullet point types
+    | | Numbered Bullets
+|☑| Give each viewer a temporary but unique id, maybe using their ip address
+| | Viewer responses
+    |☑| Submitting responses
+    |☑| Sorting responses based on the current slide
+    | | Display responses on the slide
+        | | Maybe you could make each person have a unique username, ex: Swirly Cactus
+        | | Censor swear words OR auto block responses with swears
+        | | Make a way to only let certain responses through to the board from the remote page
+            | | If rejected, send a message to the person who sent the message, perhaps telling them to f*ck off :)
+| | Shapes
+    | | Squares
+    | | Lines
+    | | Arrows
+| | Remote stuff
+    | | Shrink buttons
+    | | Have a space to accept/reject responses
+        | | Make sure only current slide responses show up

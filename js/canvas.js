@@ -21,7 +21,7 @@ function updateSlide() {
     const current_slide_data = slide_data_array[current_slide];
 
     if (current_slide_data.slideType == "question") {
-        INPUT_BOX_DIV.innerHTML = '<input id="questionInput" type="text" placeholder="Type in Your Answer Here"><button id="submitButton" type="submit">Submit</button>';
+        INPUT_BOX_DIV.innerHTML = '<input id="questionInput" type="text" placeholder="Type in Your Question/Answer Here"><button id="submitButton" type="submit" onclick="submitAnswer()">Submit</button>';
     }
     for (let i = 0; i < current_slide_data.slideElements.length; i++) {
         const element = current_slide_data.slideElements[i];
@@ -92,11 +92,11 @@ function updateSlide() {
 
             //Text Wrap
             const bulletsArray = [];
-            for(let i = 0; i < bullets.list.length; i++) {
+            for (let i = 0; i < bullets.list.length; i++) {
                 let words = bullets.list[i].split(" ");
                 let lines = [];
                 let currentLine = words[0];
-    
+
                 for (let j = 1; j < words.length; j++) {
                     let word = words[j];
                     let width = ctx.measureText(currentLine + " " + word).width;
@@ -111,25 +111,69 @@ function updateSlide() {
 
                 bulletsArray.push(lines);
             }
-            console.log(bulletsArray);
+
+            //Get Bullet Type
+            let bulletType, bulletSpace;
+            if (bullets.type == "circle") {
+                bulletType = "•";
+                bulletSpace = ctx.measureText("•").width;
+            } else if (bullets.type == "square") {
+                bulletType = "▪";
+                bulletSpace = ctx.measureText("▪").width;
+            } else if (bullets.type == "arrow") {
+                bulletType = "→";
+                bulletSpace = ctx.measureText("→").width;
+            }
 
             //Display Element
             ctx.font = `${bullets.size}px arial`;
-
-            const bulletSpace = ctx.measureText("•").width;
-            console.log(`Bullet Space: ${bulletSpace}`);
-            for(let i = 0; i < bulletsArray.length; i++) {
-                ctx.fillText("•", bullets.x, currentYPos);
+            for (let i = 0; i < bulletsArray.length; i++) {
+                ctx.fillText(bulletType, bullets.x, currentYPos);
                 let height = 0;
-                for(let j = 0; j < bulletsArray[i].length; j++) {
-                    console.log(bulletsArray[i][j]);
+                for (let j = 0; j < bulletsArray[i].length; j++) {
                     ctx.fillText(bulletsArray[i][j], bullets.x + bulletSpace * 1.5, currentYPos + height);
-                    height += (ctx.measureText(bulletsArray[i][j]).actualBoundingBoxAscent + ctx.measureText(bulletsArray[i][j]).actualBoundingBoxDescent);
+                    height += (ctx.measureText(bulletsArray[i][j]).actualBoundingBoxAscent + ctx.measureText(bulletsArray[i][j]).actualBoundingBoxDescent) + 5;
                 }
                 currentYPos += height + bullets.spacing;
             }
         }
+
+        //Response Box
+        if (element.type == "response") {
+            //Define Values
+            let response = {
+                parentSlide: element.parent,
+                x: element.xPos,
+                y: element.yPos,
+                width: element.width,
+                height: element.height
+            };
+            const responseArray = [];
+            //Get Responses
+            db.ref("/UserResponses").child(slide_data_array[current_slide].slideName).on("value", function (snapshot) {
+                ctx.fillStyle = "white";
+                ctx.fillRect(response.x, response.y - 50, response.width, response.height);
+                ctx.fillStyle = "black";
+                snapshot.forEach((r) => {
+                    console.log(r.val().accepted);
+                    if(r.val().accepted == 1) {
+                        responseArray.push(r.val().response);
+                        console.log(r.val().response);
+                        ctx.fillText(r.val().response, response.x, response.y);
+                    }
+                });
+            });
+        }
     }
+}
+
+function submitAnswer() {
+    const text_box = document.getElementById("questionInput");
+    const user_id = sessionStorage.getItem("temp_id");
+    db.ref("/UserResponses").child(slide_data_array[current_slide].slideName).child(user_id.toString()).update({
+        response: text_box.value,
+        accepted: 1
+    });
 }
 
 async function getSlideshowData() {
