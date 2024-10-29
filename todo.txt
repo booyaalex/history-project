@@ -1,7 +1,7 @@
 |☑| Different bullet point types
     |☑| Numbered Bullets
 |☑| Give each viewer a temporary but unique id, maybe using their ip address
-| | Viewer responses
+|☑| Viewer responses
     |☑| Submitting responses
     |☑| Sorting responses based on the current slide
     |☑| Display responses on the slide
@@ -13,8 +13,8 @@
     | | Squares
     | | Lines
     | | Arrows
-| | Remote stuff
+|☑| Remote stuff
     |☑| Shrink buttons
-    | | Have a space to accept/reject responses
+    |☑| Have a space to accept/reject responses
         |☑| Make sure only current slide responses show up
-| | Do something other than sessionStorage
+|☑| Do something other than sessionStorage

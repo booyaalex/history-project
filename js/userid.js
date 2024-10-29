@@ -1,5 +1,5 @@
-if(!sessionStorage.getItem("temp_id")) {
-    sessionStorage.setItem("temp_id", Math.floor(Math.random() * Date.now()));
+if(!localStorage.getItem("temp_id")) {
+    localStorage.setItem("temp_id", Math.floor(Math.random() * Date.now()));
 }
 
 async function getIpAddress() {

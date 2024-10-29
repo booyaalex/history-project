@@ -178,7 +178,7 @@ function updateSlide() {
 
 function submitAnswer() {
     const text_box = document.getElementById("questionInput");
-    const user_id = sessionStorage.getItem("temp_id");
+    const user_id = localStorage.getItem("temp_id");
 
     let temp = profanityCleaner.clean(text_box.value, { placeholder: '°' });
 
