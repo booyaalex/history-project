@@ -86,7 +86,7 @@
                 "yPos": 350,
                 "size": 60,
                 "spacing": 50,
-                "bulletType": "circle",
+                "bulletType": "number",
                 "width": 700
             },
             {
@@ -152,11 +152,11 @@
     },
     {
         "slideName": "Hiroshima Bombing 2",
-        "slideType": "default",
+        "slideType": "question",
         "slideElements": [
             {
                 "type": "text",
-                "text": "Hiroshima Bombing",
+                "text": "Question Test",
                 "xPos": 50,
                 "yPos": 100,
                 "size": 60,

@@ -116,14 +116,14 @@ function updateSlide() {
             let bulletType, bulletSpace;
             if (bullets.type == "circle") {
                 bulletType = "•";
-                bulletSpace = ctx.measureText("•").width;
             } else if (bullets.type == "square") {
                 bulletType = "▪";
-                bulletSpace = ctx.measureText("▪").width;
             } else if (bullets.type == "arrow") {
                 bulletType = "→";
-                bulletSpace = ctx.measureText("→").width;
+            } else if (bullets.type == "number") {
+                bulletType = "1";
             }
+            bulletSpace = ctx.measureText(bulletType).width;
 
             //Display Element
             ctx.font = `${bullets.size}px arial`;
@@ -135,6 +135,10 @@ function updateSlide() {
                     height += (ctx.measureText(bulletsArray[i][j]).actualBoundingBoxAscent + ctx.measureText(bulletsArray[i][j]).actualBoundingBoxDescent) + 5;
                 }
                 currentYPos += height + bullets.spacing;
+                if(bullets.type == "number") {
+                    bulletType = (Number(bulletType) + 1);
+                    bulletSpace = ctx.measureText(bulletType).width;
+                }
             }
         }
 
@@ -180,7 +184,7 @@ function submitAnswer() {
 
     db.ref("/UserResponses").child(slide_data_array[current_slide].slideName).child(user_id.toString()).update({
         response: temp,
-        accepted: 1,
+        accepted: 0,
         funName: createFunName()
     });
 }

@@ -56,3 +56,50 @@ footer {
     width: 35vw;
     height: 30vh;
 }
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 45vh;
+}
+.row > div {
+    width: 45%;
+    border: solid 2px black;
+}
+
+#responseBox {
+    overflow-y: scroll;
+}
+
+#responseBox > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: solid 2px black;
+    margin: 5px;
+    height: fit-content;
+    font-size: 1.5em;
+    
+}
+
+#responseBox * {
+    height: inherit;
+}
+
+#responseBox h3 {
+    height: initial;
+}
+
+#responseBox button {
+    width: 100px;
+    height: 100px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+#acceptButton {
+    background-color: green;
+}
+#rejectButton {
+    background-color: red;
+}
