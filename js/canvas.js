@@ -28,24 +28,7 @@ function updateSlide() {
 
         //Text Elements
         if (element.type == "text") {
-            let text = {
-                value: element.text,
-                x: element.xPos,
-                y: element.yPos,
-                size: element.size
-            };
-            ctx.font = `${text.size}px arial`;
-
-            //Modifiers
-            if (element.modifiers.includes("h-center")) {
-                text.x = (board.width / 2) - (ctx.measureText(text.value).width / 2);
-            }
-            if (element.modifiers.includes("v-center")) {
-                text.y = (board.height / 2) - (ctx.measureText(text.value).actualBoundingBoxAscent + ctx.measureText(text.value).actualBoundingBoxDescent) / 2;
-            }
-
-            //Display Element
-            ctx.fillText(text.value, text.x, text.y);
+            drawing.addText(element);
         }
 
         //Image Elements
@@ -173,6 +156,29 @@ function updateSlide() {
                 });
             });
         }
+    }
+}
+
+const drawing = {
+    addText: function addText(element) {
+        let text = {
+            value: element.text,
+            x: element.xPos,
+            y: element.yPos,
+            size: element.size
+        };
+        ctx.font = `${text.size}px arial`;
+
+        //Modifiers
+        if (element.modifiers.includes("h-center")) {
+            text.x = (board.width / 2) - (ctx.measureText(text.value).width / 2);
+        }
+        if (element.modifiers.includes("v-center")) {
+            text.y = (board.height / 2) - (ctx.measureText(text.value).actualBoundingBoxAscent + ctx.measureText(text.value).actualBoundingBoxDescent) / 2;
+        }
+
+        //Display Element
+        ctx.fillText(text.value, text.x, text.y);
     }
 }
 
