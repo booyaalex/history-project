@@ -114,11 +114,24 @@
         "slideElements": [
             {
                 "type": "text",
-                "text": "The Potsdam Declaration",
+                "text": "Shape Testing Slide",
                 "xPos": 50,
                 "yPos": 100,
                 "size": 60,
                 "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "rect",
+                "xPos": 100,
+                "yPos": 100,
+                "width": 50,
+                "height": 50,
+                "color": "black",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                }
             }
         ]
     },

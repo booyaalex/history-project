@@ -36,6 +36,11 @@ function updateSlide() {
         if (element.type == "response") {
             drawing.addResponseBox(element);
         }
+        if (element.type == "shape") {
+            if(element.shape == "rect") {
+                drawing.addRect(element);
+            }
+        }
     }
 }
 
@@ -175,6 +180,24 @@ const drawing = {
                 i++;
             });
         });
+    },
+    shapes: {
+        addRect: function addRect(element) {
+            let rect = {
+                x: element.xPos,
+                y: element.yPos,
+                width: element.width,
+                height: element.height,
+                color: element.color,
+                stroke: {
+                    color: element.stroke.color,
+                    width: element.stroke.width
+                }
+            };
+
+            ctx.fillStyle = color;
+            ctx.fillRect(rect.x, rect.y, rect.width, rect.height);
+        }
     }
 }
 
