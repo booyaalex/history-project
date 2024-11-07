@@ -23,138 +23,18 @@ function updateSlide() {
     if (current_slide_data.slideType == "question") {
         INPUT_BOX_DIV.innerHTML = '<input id="questionInput" type="text" placeholder="Type in Your Question/Answer Here"><button id="submitButton" type="submit" onclick="submitAnswer()">Submit</button>';
     }
-    for (let i = 0; i < current_slide_data.slideElements.length; i++) {
-        const element = current_slide_data.slideElements[i];
-
-        //Text Elements
+    for (const element of current_slide_data.slideElements) {
         if (element.type == "text") {
             drawing.addText(element);
         }
-
-        //Image Elements
         if (element.type == "image") {
-            //Define Values
-            let image = {
-                src: element.src,
-                x: element.xPos,
-                y: element.yPos,
-                width: element.width,
-                height: element.height
-            };
-
-            //Modifiers
-            if (element.modifiers.includes("h-center")) {
-                image.x = (board.width / 2) - (image.width / 2);
-            }
-            if (element.modifiers.includes("v-center")) {
-                image.y = (board.height / 2) - (image.height / 2);
-            }
-
-            //Display Element
-            const imageElement = new Image(image.width, image.height);
-            imageElement.src = image.src;
-            //drawImage(imageElement, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
-            imageElement.onload = function () {
-                ctx.drawImage(imageElement, image.x, image.y, image.width, image.height);
-            };
+            drawing.addImage(element);
         }
-
-        //Bullet Points
         if (element.type == "bullets") {
-            //Define Values
-            let bullets = {
-                list: element.list,
-                x: element.xPos,
-                y: element.yPos, //xPos & yPos of first bullet.
-                size: element.size,
-                width: element.width,
-                spacing: element.spacing,
-                type: element.bulletType
-            };
-            let currentYPos = bullets.y;
-
-            //Text Wrap
-            const bulletsArray = [];
-            for (let i = 0; i < bullets.list.length; i++) {
-                let words = bullets.list[i].split(" ");
-                let lines = [];
-                let currentLine = words[0];
-
-                for (let j = 1; j < words.length; j++) {
-                    let word = words[j];
-                    let width = ctx.measureText(currentLine + " " + word).width;
-                    if (width < bullets.width) {
-                        currentLine += " " + word;
-                    } else {
-                        lines.push(currentLine);
-                        currentLine = word;
-                    }
-                }
-                lines.push(currentLine);
-
-                bulletsArray.push(lines);
-            }
-
-            //Get Bullet Type
-            let bulletType, bulletSpace;
-            if (bullets.type == "circle") {
-                bulletType = "•";
-            } else if (bullets.type == "square") {
-                bulletType = "▪";
-            } else if (bullets.type == "arrow") {
-                bulletType = "→";
-            } else if (bullets.type == "number") {
-                bulletType = "1";
-            }
-            bulletSpace = ctx.measureText(bulletType).width;
-
-            //Display Element
-            ctx.font = `${bullets.size}px arial`;
-            for (let i = 0; i < bulletsArray.length; i++) {
-                ctx.fillText(bulletType, bullets.x, currentYPos);
-                let height = 0;
-                for (let j = 0; j < bulletsArray[i].length; j++) {
-                    ctx.fillText(bulletsArray[i][j], bullets.x + bulletSpace * 1.5, currentYPos + height);
-                    height += (ctx.measureText(bulletsArray[i][j]).actualBoundingBoxAscent + ctx.measureText(bulletsArray[i][j]).actualBoundingBoxDescent) + 5;
-                }
-                currentYPos += height + bullets.spacing;
-                if(bullets.type == "number") {
-                    bulletType = (Number(bulletType) + 1);
-                    bulletSpace = ctx.measureText(bulletType).width;
-                }
-            }
+            drawing.addBulletPoints(element);
         }
-
-        //Response Box
         if (element.type == "response") {
-            //Define Values
-            let response = {
-                parentSlide: element.parent,
-                x: element.xPos,
-                y: element.yPos,
-                width: element.width,
-                height: element.height,
-                size: element.size
-            };
-            const responseArray = [];
-            //Get Responses
-            db.ref("/UserResponses").child(slide_data_array[current_slide].slideName).on("value", function (snapshot) {
-                ctx.fillStyle = "white";
-                ctx.fillRect(response.x, response.y - 50, response.width, response.height);
-                ctx.fillStyle = "black";
-
-                let i = 0;
-                snapshot.forEach((r) => {
-                    console.log(r.val().accepted);
-                    if(r.val().accepted == 1) {
-                        responseArray.push(r.val().response);
-                        console.log(r.val().response);
-                        ctx.font = `${response.size}px arial`;
-                        ctx.fillText(`${r.val().funName}: ${r.val().response}`, response.x, response.y + (i * 40));
-                    }
-                    i++;
-                });
-            });
+            drawing.addResponseBox(element);
         }
     }
 }
@@ -179,6 +59,122 @@ const drawing = {
 
         //Display Element
         ctx.fillText(text.value, text.x, text.y);
+    },
+    addImage: function addImage(element) {
+        let image = {
+            src: element.src,
+            x: element.xPos,
+            y: element.yPos,
+            width: element.width,
+            height: element.height
+        };
+
+        //Modifiers
+        if (element.modifiers.includes("h-center")) {
+            image.x = (board.width / 2) - (image.width / 2);
+        }
+        if (element.modifiers.includes("v-center")) {
+            image.y = (board.height / 2) - (image.height / 2);
+        }
+
+        //Display Element
+        const imageElement = new Image(image.width, image.height);
+        imageElement.src = image.src;
+        imageElement.onload = function () {
+            ctx.drawImage(imageElement, image.x, image.y, image.width, image.height);
+        };
+    },
+    addBulletPoints: function addBulletPoints(element) {
+        let bullets = {
+            list: element.list,
+            x: element.xPos,
+            y: element.yPos,
+            size: element.size,
+            width: element.width,
+            spacing: element.spacing,
+            type: element.bulletType
+        };
+        let currentYPos = bullets.y;
+
+        //Text Wrap
+        const bulletsArray = [];
+        for (let i = 0; i < bullets.list.length; i++) {
+            let words = bullets.list[i].split(" ");
+            let lines = [];
+            let currentLine = words[0];
+
+            for (let j = 1; j < words.length; j++) {
+                let word = words[j];
+                let width = ctx.measureText(currentLine + " " + word).width;
+                if (width < bullets.width) {
+                    currentLine += " " + word;
+                } else {
+                    lines.push(currentLine);
+                    currentLine = word;
+                }
+            }
+            lines.push(currentLine);
+
+            bulletsArray.push(lines);
+        }
+
+        //Bullet Type
+        let bulletType, bulletSpace;
+        if (bullets.type == "circle") {
+            bulletType = "•";
+        } else if (bullets.type == "square") {
+            bulletType = "▪";
+        } else if (bullets.type == "arrow") {
+            bulletType = "→";
+        } else if (bullets.type == "number") {
+            bulletType = "1";
+        }
+        bulletSpace = ctx.measureText(bulletType).width;
+
+        //Display Element
+        ctx.font = `${bullets.size}px arial`;
+        for (let i = 0; i < bulletsArray.length; i++) {
+            ctx.fillText(bulletType, bullets.x, currentYPos);
+            let height = 0;
+            for (let j = 0; j < bulletsArray[i].length; j++) {
+                ctx.fillText(bulletsArray[i][j], bullets.x + bulletSpace * 1.5, currentYPos + height);
+                height += (ctx.measureText(bulletsArray[i][j]).actualBoundingBoxAscent + ctx.measureText(bulletsArray[i][j]).actualBoundingBoxDescent) + 5;
+            }
+            currentYPos += height + bullets.spacing;
+            if(bullets.type == "number") {
+                bulletType = (Number(bulletType) + 1);
+                bulletSpace = ctx.measureText(bulletType).width;
+            }
+        }
+    },
+    addResponseBox: function addResponseBox(element) {
+        let response = {
+            parentSlide: element.parent,
+            x: element.xPos,
+            y: element.yPos,
+            width: element.width,
+            height: element.height,
+            size: element.size
+        };
+        const responseArray = [];
+        //Get Responses
+        db.ref("/UserResponses").child(slide_data_array[current_slide].slideName).on("value", function (snapshot) {
+            ctx.fillStyle = "white";
+            ctx.fillRect(response.x, response.y - 50, response.width, response.height);
+            ctx.fillStyle = "black";
+
+            let i = 0;
+            snapshot.forEach((r) => {
+                console.log(r.val().accepted);
+                if(r.val().accepted == 1) {
+                    responseArray.push(r.val().response);
+                    console.log(r.val().response);
+                    ctx.font = `${response.size}px arial`;
+                    ctx.fillText(`${r.val().funName}: ${r.val().response}`, response.x, response.y + (i * 40));
+                }
+                i++;
+            });
+        });
     }
 }
 
