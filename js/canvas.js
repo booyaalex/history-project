@@ -43,6 +43,9 @@ function updateSlide() {
             if (element.shape == "line") {
                 drawing.shapes.addLine(element);
             }
+            if (element.shape == "polygon") {
+                drawing.shapes.addPolygon(element);
+            }
         }
     }
 }
@@ -254,7 +257,7 @@ const drawing = {
 
             ctx.fillStyle = polygon.color;
             ctx.beginPath();
-            //f
+
             for(let i = 0; i < polygons.positions.length; i++) {
                 const pos = polygons.positions[i];
                 if(i == 0) {
@@ -263,8 +266,9 @@ const drawing = {
                     ctx.lineTo(pos.x, pos.y);
                 }
             }
-            ctx.fill();
             ctx.closePath();
+            ctx.fill();
+            
         }
     }
 }
