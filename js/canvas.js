@@ -196,9 +196,9 @@ const drawing = {
             };
 
             if(rect.stroke.width > 0) {
-                //ctx.lineWidth = rect.stroke.width;
+                ctx.lineWidth = rect.stroke.width;
                 ctx.strokeStyle = rect.stroke.color;
-                ctx.strokeRect(rect.x - (1 * window.devicePixelRatio), rect.y - 1, rect.width + 1, rect.height + 1);
+                ctx.strokeRect(rect.x - 1, rect.y - 1, rect.width + 2, rect.height + 2);
             }
 
             ctx.fillStyle = rect.color;

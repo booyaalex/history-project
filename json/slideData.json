@@ -130,7 +130,7 @@
                 "color": "black",
                 "stroke": {
                     "color": "blue",
-                    "width": 4
+                    "width": 1
                 },
                 "modifiers": []
             }
