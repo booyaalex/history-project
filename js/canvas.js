@@ -37,7 +37,7 @@ function updateSlide() {
             drawing.addResponseBox(element);
         }
         if (element.type == "shape") {
-            if(element.shape == "rect") {
+            if (element.shape == "rect") {
                 drawing.shapes.addRect(element);
             }
         }
@@ -152,7 +152,7 @@ const drawing = {
                 height += (ctx.measureText(bulletsArray[i][j]).actualBoundingBoxAscent + ctx.measureText(bulletsArray[i][j]).actualBoundingBoxDescent) + 5;
             }
             currentYPos += height + bullets.spacing;
-            if(bullets.type == "number") {
+            if (bullets.type == "number") {
                 bulletType = (Number(bulletType) + 1);
                 bulletSpace = ctx.measureText(bulletType).width;
             }
@@ -177,7 +177,7 @@ const drawing = {
             let i = 0;
             snapshot.forEach((r) => {
                 console.log(r.val().accepted);
-                if(r.val().accepted == 1) {
+                if (r.val().accepted == 1) {
                     responseArray.push(r.val().response);
                     console.log(r.val().response);
                     ctx.font = `${response.size}px arial`;
@@ -214,16 +214,33 @@ const drawing = {
                 rect.y = 0;
                 rect.height = board.height;
             }
-            
+
 
             //Display Element
-            if(rect.stroke.width > 0) {
+            if (rect.stroke.width > 0) {
                 ctx.lineWidth = rect.stroke.width;
                 ctx.strokeStyle = rect.stroke.color;
                 ctx.strokeRect(rect.x - 1, rect.y - 1, rect.width + 2, rect.height + 2);
             }
             ctx.fillStyle = rect.color;
             ctx.fillRect(rect.x, rect.y, rect.width, rect.height);
+        },
+        addLine: function addLine(element) {
+            let line = {
+                x1: element.x1,
+                y1: element.y1,
+                x2: element.x2,
+                y2: element.y2,
+                width: element.width,
+                color: element.color
+            };
+
+            ctx.beginPath();
+            ctx.strokeStyle = line.color;
+            ctx.lineWidth = line.width;
+            ctx.moveTo(line.x1, line.y1);
+            ctx.lineTo(line.x2, line.y2);
+            ctx.stroke();
         }
     }
 }

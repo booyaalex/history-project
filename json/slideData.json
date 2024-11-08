@@ -125,17 +125,24 @@
                 "shape": "rect",
                 "xPos": 200,
                 "yPos": 200,
-                "width": 150,
-                "height": 300,
+                "width": 50,
+                "height": 50,
                 "color": "red",
                 "stroke": {
                     "color": "none",
                     "width": 0
                 },
-                "modifiers": [
-                    "h-full",
-                    "v-full"
-                ]
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 500,
+                "y1": 500,
+                "x2": 550,
+                "y2": 550,
+                "width": 10,
+                "color": "black"
             }
         ]
     },
