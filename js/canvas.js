@@ -238,11 +238,7 @@ const drawing = {
                 x2: element.x2,
                 y2: element.y2,
                 width: element.width,
-                color: element.color,
-                stroke: {
-                    color: element.stroke.color,
-                    width: element.stroke.width
-                }
+                color: element.color
             };
 
             ctx.beginPath();
@@ -256,7 +252,11 @@ const drawing = {
             let polygon = {
                 positions: element.positions,
                 width: element.width,
-                color: element.color
+                color: element.color,
+                stroke: {
+                    color: element.stroke.color,
+                    width: element.stroke.width
+                }
             };
 
             ctx.fillStyle = polygon.color;
