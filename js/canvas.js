@@ -195,6 +195,11 @@ const drawing = {
                 }
             };
 
+            if(rect.stroke.width > 0) {
+                ctx.strokeStyle = rect.stroke.color;
+                ctx.strokeRect(rect.x - rect.stroke.width, rect.y - rect.stroke.width, rect.width + rect.stroke.width, rect.height + rect.stroke.width);
+            }
+
             ctx.fillStyle = rect.color;
             ctx.fillRect(rect.x, rect.y, rect.width, rect.height);
         }
