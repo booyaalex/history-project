@@ -40,6 +40,9 @@ function updateSlide() {
             if (element.shape == "rect") {
                 drawing.shapes.addRect(element);
             }
+            if (element.shape == "line") {
+                drawing.shapes.addLine(element);
+            }
         }
     }
 }
