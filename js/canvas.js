@@ -198,10 +198,14 @@ const drawing = {
             //Modifiers
             if (element.modifiers.includes("h-center")) {
                 rect.x = (board.width / 2) - (rect.width / 2);
+            } else if (element.modifiers.includes("h-full")) {
+                rect.x = 0;
+                rect.width = board.width;
             }
             if (element.modifiers.includes("v-center")) {
                 rect.y = (board.height / 2) - (rect.height / 2);
             }
+            
 
             //Display Element
             if(rect.stroke.width > 0) {

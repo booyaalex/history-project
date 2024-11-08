@@ -133,7 +133,7 @@
                     "width": 20
                 },
                 "modifiers": [
-                    "h-center",
+                    "h-full",
                     "v-center"
                 ]
             }

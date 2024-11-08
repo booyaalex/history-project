@@ -12,10 +12,9 @@
 | | Shapes
     | | Squares
         |☑| On The Canvas
-        | | Stroke
+        |☑| Stroke
         | | Modifiers
-            | | Centers
-            | | Float Left & Right
+            |☑| Centers
             | | Full Width / Height
     | | Lines
     | | Arrows
