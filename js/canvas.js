@@ -244,6 +244,27 @@ const drawing = {
             ctx.moveTo(line.x1, line.y1);
             ctx.lineTo(line.x2, line.y2);
             ctx.stroke();
+        },
+        addPolygon: function addPolygon(element) {
+            let polygon = {
+                positions: element.positions,
+                width: element.width,
+                color: element.color
+            };
+
+            ctx.fillStyle = polygon.color;
+            ctx.beginPath();
+            
+            for(let i = 0; i < polygons.positions.length; i++) {
+                const pos = polygons.positions[i];
+                if(i == 0) {
+                    ctx.moveTo(pos.x, pos.y);
+                } else {
+                    ctx.lineTo(pos.x, pos.y);
+                }
+            }
+            ctx.closePath();
+            ctx.fill();
         }
     }
 }

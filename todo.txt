@@ -13,10 +13,10 @@
     | | Squares
         |☑| On The Canvas
         |☑| Stroke
-        | | Modifiers
+        |☑| Modifiers
             |☑| Centers
-            | | Full Width / Height
-    | | Lines
+            |☑| Full Width / Height
+    |☑| Lines
     | | Polygons
     | | Arrows
 |☑| Remote stuff
