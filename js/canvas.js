@@ -238,7 +238,11 @@ const drawing = {
                 x2: element.x2,
                 y2: element.y2,
                 width: element.width,
-                color: element.color
+                color: element.color,
+                stroke: {
+                    color: element.stroke.color,
+                    width: element.stroke.width
+                }
             };
 
             ctx.beginPath();
@@ -257,7 +261,6 @@ const drawing = {
 
             ctx.fillStyle = polygon.color;
             ctx.beginPath();
-
             for(let i = 0; i < polygon.positions.length; i++) {
                 const pos = polygon.positions[i];
                 if(i == 0) {
@@ -268,7 +271,10 @@ const drawing = {
             }
             ctx.closePath();
             ctx.fill();
-            
+
+            ctx.lineWidth = polygon.stroke.width;
+            ctx.strokeStyle = polygon.stroke.color;
+            ctx.stroke();
         }
     }
 }

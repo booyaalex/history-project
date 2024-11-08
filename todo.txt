@@ -18,6 +18,8 @@
             |☑| Full Width / Height
     |☑| Lines
     | | Polygons
+        |☑| On The Canvas
+        | | Stroke
     | | Arrows
 |☑| Remote stuff
     |☑| Shrink buttons

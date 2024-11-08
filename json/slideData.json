@@ -153,9 +153,17 @@
                     {
                         "x": 500,
                         "y": 700
+                    },
+                    {
+                        "x": 600,
+                        "y": 700
                     }
                 ],
-                "color": "black"
+                "color": "red",
+                "stroke": {
+                    "color": "yellow",
+                    "width": 20
+                }
             }
         ]
     },
