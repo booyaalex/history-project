@@ -263,8 +263,8 @@ const drawing = {
                     ctx.lineTo(pos.x, pos.y);
                 }
             }
-            ctx.closePath();
             ctx.fill();
+            ctx.closePath();
         }
     }
 }
