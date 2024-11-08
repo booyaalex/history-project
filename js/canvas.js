@@ -195,7 +195,7 @@ const drawing = {
                 }
             };
 
-            ctx.fillStyle = color;
+            ctx.fillStyle = rect.color;
             ctx.fillRect(rect.x, rect.y, rect.width, rect.height);
         }
     }
