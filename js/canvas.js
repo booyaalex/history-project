@@ -258,8 +258,8 @@ const drawing = {
             ctx.fillStyle = polygon.color;
             ctx.beginPath();
 
-            for(let i = 0; i < polygons.positions.length; i++) {
-                const pos = polygons.positions[i];
+            for(let i = 0; i < polygon.positions.length; i++) {
+                const pos = polygon.positions[i];
                 if(i == 0) {
                     ctx.moveTo(pos.x, pos.y);
                 } else {
