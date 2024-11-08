@@ -254,7 +254,7 @@ const drawing = {
 
             ctx.fillStyle = polygon.color;
             ctx.beginPath();
-            
+            //f
             for(let i = 0; i < polygons.positions.length; i++) {
                 const pos = polygons.positions[i];
                 if(i == 0) {
