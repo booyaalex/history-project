@@ -38,7 +38,7 @@ function updateSlide() {
         }
         if (element.type == "shape") {
             if(element.shape == "rect") {
-                drawing.addRect(element);
+                drawing.shapes.addRect(element);
             }
         }
     }
