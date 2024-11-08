@@ -129,12 +129,12 @@
                 "height": 300,
                 "color": "red",
                 "stroke": {
-                    "color": "yellow",
-                    "width": 20
+                    "color": "none",
+                    "width": 0
                 },
                 "modifiers": [
                     "h-full",
-                    "v-center"
+                    "v-full"
                 ]
             }
         ]

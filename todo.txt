@@ -17,6 +17,7 @@
             |☑| Centers
             | | Full Width / Height
     | | Lines
+    | | Polygons
     | | Arrows
 |☑| Remote stuff
     |☑| Shrink buttons

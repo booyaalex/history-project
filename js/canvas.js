@@ -77,9 +77,15 @@ const drawing = {
         //Modifiers
         if (element.modifiers.includes("h-center")) {
             image.x = (board.width / 2) - (image.width / 2);
+        } else if (element.modifiers.includes("h-full")) {
+            image.x = 0;
+            image.width = board.width;
         }
         if (element.modifiers.includes("v-center")) {
             image.y = (board.height / 2) - (image.height / 2);
+        } else if (element.modifiers.includes("v-full")) {
+            image.y = 0;
+            image.height = board.height;
         }
 
         //Display Element
@@ -204,6 +210,9 @@ const drawing = {
             }
             if (element.modifiers.includes("v-center")) {
                 rect.y = (board.height / 2) - (rect.height / 2);
+            } else if (element.modifiers.includes("v-full")) {
+                rect.y = 0;
+                rect.height = board.height;
             }
             
 
