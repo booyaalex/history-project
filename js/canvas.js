@@ -197,7 +197,7 @@ const drawing = {
 
             if(rect.stroke.width > 0) {
                 ctx.strokeStyle = rect.stroke.color;
-                ctx.strokeRect(rect.x - rect.stroke.width, rect.y - rect.stroke.width, rect.width + rect.stroke.width, rect.height + rect.stroke.width);
+                ctx.strokeRect(rect.x - rect.stroke.width, rect.y - rect.stroke.width, rect.width + rect.stroke.width * 2, rect.height + rect.stroke.width * 2);
             }
 
             ctx.fillStyle = rect.color;
