@@ -127,12 +127,15 @@
                 "yPos": 200,
                 "width": 150,
                 "height": 300,
-                "color": "black",
+                "color": "red",
                 "stroke": {
-                    "color": "blue",
-                    "width": 4
+                    "color": "yellow",
+                    "width": 20
                 },
-                "modifiers": []
+                "modifiers": [
+                    "h-center",
+                    "v-center"
+                ]
             }
         ]
     },

@@ -11,6 +11,12 @@
             | | If rejected, send a message to the person who sent the message, perhaps telling them to f*ck off :)
 | | Shapes
     | | Squares
+        |☑| On The Canvas
+        | | Stroke
+        | | Modifiers
+            | | Centers
+            | | Float Left & Right
+            | | Full Width / Height
     | | Lines
     | | Arrows
 |☑| Remote stuff

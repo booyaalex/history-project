@@ -195,12 +195,20 @@ const drawing = {
                 }
             };
 
+            //Modifiers
+            if (element.modifiers.includes("h-center")) {
+                rect.x = (board.width / 2) - (rect.width / 2);
+            }
+            if (element.modifiers.includes("v-center")) {
+                rect.y = (board.height / 2) - (rect.height / 2);
+            }
+
+            //Display Element
             if(rect.stroke.width > 0) {
                 ctx.lineWidth = rect.stroke.width;
                 ctx.strokeStyle = rect.stroke.color;
                 ctx.strokeRect(rect.x - 1, rect.y - 1, rect.width + 2, rect.height + 2);
             }
-
             ctx.fillStyle = rect.color;
             ctx.fillRect(rect.x, rect.y, rect.width, rect.height);
         }
