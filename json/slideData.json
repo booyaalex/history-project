@@ -164,6 +164,20 @@
                     "color": "yellow",
                     "width": 20
                 }
+            },
+            {
+                "type": "shape",
+                "shape": "arrow",
+                "x1": 1000,
+                "y1": 300,
+                "x2": 1000,
+                "y2": 500,
+                "width": 70,
+                "color": "purple",
+                "stroke": {
+                    "color": "black",
+                    "width": 5
+                }
             }
         ]
     },

@@ -9,18 +9,18 @@
         |☑| Censor swear words
         |☑| Make a way to only let certain responses through to the board from the remote page
             | | If rejected, send a message to the person who sent the message, perhaps telling them to f*ck off :)
-| | Shapes
-    | | Squares
+|☑| Shapes
+    |☑| Squares
         |☑| On The Canvas
         |☑| Stroke
         |☑| Modifiers
             |☑| Centers
             |☑| Full Width / Height
     |☑| Lines
-    | | Polygons
+    |☑| Polygons
         |☑| On The Canvas
-        | | Stroke
-    | | Arrows
+        |☑| Stroke
+    |☑| Arrows
 |☑| Remote stuff
     |☑| Shrink buttons
     |☑| Have a space to accept/reject responses

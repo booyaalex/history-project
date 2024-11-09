@@ -46,6 +46,9 @@ function updateSlide() {
             if (element.shape == "polygon") {
                 drawing.shapes.addPolygon(element);
             }
+            if (element.shape == "arrow") {
+                drawing.shapes.addArrow(element);
+            }
         }
     }
 }
@@ -261,9 +264,9 @@ const drawing = {
 
             ctx.fillStyle = polygon.color;
             ctx.beginPath();
-            for(let i = 0; i < polygon.positions.length; i++) {
+            for (let i = 0; i < polygon.positions.length; i++) {
                 const pos = polygon.positions[i];
-                if(i == 0) {
+                if (i == 0) {
                     ctx.moveTo(pos.x, pos.y);
                 } else {
                     ctx.lineTo(pos.x, pos.y);
@@ -275,6 +278,66 @@ const drawing = {
             ctx.lineWidth = polygon.stroke.width;
             ctx.strokeStyle = polygon.stroke.color;
             ctx.stroke();
+        },
+        addArrow: function addArrow(element) {
+            //XPOS- DISTANCE * Math.cos(arrow.angle - Math.PI / ANGLE)
+            //YPOS - DISTANCE * Math.sin(arrow.angle - Math.PI / ANGLE)
+            let arrow = {
+                x1: element.x1,
+                y1: element.y1,
+                x2: element.x2,
+                y2: element.y2,
+                width: element.width,
+                color: element.color,
+                stroke: {
+                    color: element.stroke.color,
+                    width: element.stroke.width
+                },
+                length: Math.sqrt(Math.pow((element.x2 - element.x1), 2) + Math.pow((element.y2 - element.y1), 2)) - 75,
+                angle: Math.atan2((element.y2 - element.y1), (element.x2 - element.x1)),
+                points: [ null, null, null, { x: element.x2, y: element.y2 }, null, null, null ]
+            };
+
+            //Get Arrow Points
+            arrow.points[0] = {
+                x: arrow.x1 - (arrow.width / 2) * Math.cos(arrow.angle - Math.PI / -2),
+                y: arrow.y1 - (arrow.width / 2) * Math.sin(arrow.angle - Math.PI / -2)
+            };
+            arrow.points[6] = {
+                x: arrow.x1 - (arrow.width / 2) * Math.cos(arrow.angle - Math.PI / 2),
+                y: arrow.y1 - (arrow.width / 2) * Math.sin(arrow.angle - Math.PI / 2)
+            };
+            arrow.points[1] = {
+                x: arrow.points[0].x - arrow.length * Math.cos(arrow.angle - Math.PI),
+                y: arrow.points[0].y - arrow.length * Math.sin(arrow.angle - Math.PI)
+            };
+            arrow.points[5] = {
+                x: arrow.points[6].x - arrow.length * Math.cos(arrow.angle - Math.PI),
+                y: arrow.points[6].y - arrow.length * Math.sin(arrow.angle - Math.PI)
+            };
+            arrow.points[2] = {
+                x: arrow.points[1].x - (arrow.width / 2) * Math.cos(arrow.angle - Math.PI / -2),
+                y: arrow.points[1].y - (arrow.width / 2) * Math.sin(arrow.angle - Math.PI / -2)
+            };
+            arrow.points[4] = {
+                x: arrow.points[5].x - (arrow.width / 2) * Math.cos(arrow.angle - Math.PI / 2),
+                y: arrow.points[5].y - (arrow.width / 2) * Math.sin(arrow.angle - Math.PI / 2)
+            };
+
+            //Display Element
+            ctx.beginPath();
+            ctx.fillStyle = arrow.color;
+            for(let i = 0; i < 7; i++) {
+                ctx.lineTo(arrow.points[i].x, arrow.points[i].y);
+            }
+            ctx.lineTo(arrow.points[0].x, arrow.points[0].y);
+            ctx.fill();
+            if (arrow.stroke.width > 0) {
+                ctx.strokeStyle = arrow.stroke.color;
+                ctx.lineWidth = arrow.stroke.width;
+                ctx.stroke();
+            }
+            
         }
     }
 }
