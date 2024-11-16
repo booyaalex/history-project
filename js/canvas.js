@@ -23,6 +23,8 @@ function updateSlide() {
     if (current_slide_data.slideType == "question") {
         INPUT_BOX_DIV.innerHTML = '<input id="questionInput" type="text" placeholder="Type in Your Question/Answer Here"><button id="submitButton" type="submit" onclick="submitAnswer()">Submit</button>';
     }
+    ctx.fillStyle = current_slide_data.backgroundColor;
+    ctx.fillRect(0, 0, board.width, board.height);
     for (const element of current_slide_data.slideElements) {
         if (element.type == "text") {
             drawing.addText(element);
@@ -59,9 +61,10 @@ const drawing = {
             value: element.text,
             x: element.xPos,
             y: element.yPos,
-            size: element.size
+            size: element.size,
+            color: element.color
         };
-        ctx.font = `${text.size}px arial`;
+        ctx.font = `${text.size}px Verdana`;
 
         //Modifiers
         if (element.modifiers.includes("h-center")) {
@@ -72,6 +75,7 @@ const drawing = {
         }
 
         //Display Element
+        ctx.fillStyle = text.color;
         ctx.fillText(text.value, text.x, text.y);
     },
     addImage: function addImage(element) {
@@ -112,7 +116,8 @@ const drawing = {
             size: element.size,
             width: element.width,
             spacing: element.spacing,
-            type: element.bulletType
+            type: element.bulletType,
+            color: element.color
         };
         let currentYPos = bullets.y;
 
@@ -153,6 +158,7 @@ const drawing = {
 
         //Display Element
         ctx.font = `${bullets.size}px arial`;
+        ctx.fillStyle = bullets.color;
         for (let i = 0; i < bulletsArray.length; i++) {
             ctx.fillText(bulletType, bullets.x, currentYPos);
             let height = 0;
@@ -369,7 +375,7 @@ getSlideshowData().then(() => {
     window.devicePixelRatio = 8;
     ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
     board.width = Math.floor(board.width * window.devicePixelRatio);
-    board.height = Math.floor((board.width / Math.abs(-2.5)));
+    board.height = Math.floor((board.width / 2.5));
 
     updateSlide();
 });
@@ -385,3 +391,8 @@ function createFunName() {
 
     return `${firstName[Math.floor(Math.random() * 9)]} ${lastName[Math.floor(Math.random() * 9)]}`;
 }
+
+document.addEventListener("visibilitychange", () => {
+    console.log(document.hidden);
+    // Modify behavior…
+});

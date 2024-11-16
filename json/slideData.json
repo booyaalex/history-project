@@ -2,24 +2,232 @@
     {
         "slideName": "The Best History Project",
         "slideType": "default",
+        "backgroundColor": "#a6a6ab",
         "slideElements": [
             {
-                "type": "text",
-                "text": "The Bombing of Japan",
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "image",
+                "src": "https://cdnph.upi.com/ph/st/th/8051438702501/archives/upi/0a0fcbe6fb9556c99b5a003d9b1d7639/v1.5/Hiroshima-as-I-saw-it.jpg?lg=5&=1",
                 "xPos": 0,
-                "yPos": 100,
-                "size": 80,
+                "yPos": 0,
+                "width": 1200,
+                "height": 1200,
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "The Atomic Bombing of Japan",
+                "xPos": 1235,
+                "yPos": 410,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Austin Isidoro-Rossini",
+                "xPos": 1525,
+                "yPos": 490,
+                "size": 50,
+                "color": "#472159",
+                "modifiers": []
+            }
+        ]
+    },
+    {
+        "slideName": "Overview 1",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Overview",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
                 "modifiers": [
                     "h-center"
                 ]
             },
             {
-                "type": "image",
-                "src": "https://i.redd.it/45qcleeuzqay.jpg",
+                "type": "bullets",
+                "list": [
+                    "Took place Aug 6th to Aug 9th, 1945."
+                ],
+                "xPos": 100,
+                "yPos": 285,
+                "size": 65,
+                "spacing": 25,
+                "bulletType": "circle",
+                "color": "black",
+                "width": 1300
+            }
+        ]
+    },
+    {
+        "slideName": "Overview 2",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Overview",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "bullets",
+                "list": [
+                    "Took place Aug 6th to Aug 9th, 1945.",
+                    "The two bombing sites were Hiroshima and Nagasaki."
+                ],
+                "xPos": 100,
+                "yPos": 285,
+                "size": 65,
+                "spacing": 25,
+                "bulletType": "circle",
+                "color": "black",
+                "width": 1300
+            }
+        ]
+    },
+    {
+        "slideName": "Why?",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Why?",
                 "xPos": 0,
-                "yPos": 100,
-                "width": 300,
-                "height": 300,
+                "yPos": 0,
+                "size": 100,
+                "color": "#472159",
                 "modifiers": [
                     "h-center",
                     "v-center"
@@ -28,89 +236,96 @@
         ]
     },
     {
-        "slideName": "WW2 Overview",
+        "slideName": "WW2 Overview 1",
         "slideType": "default",
+        "backgroundColor": "#a6a6ab",
         "slideElements": [
             {
-                "type": "text",
-                "text": "Bullet Point Testing Slide",
-                "xPos": 50,
-                "yPos": 100,
-                "size": 60,
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
                 "modifiers": []
             },
             {
-                "type": "bullets",
-                "list": [
-                    "Fisrt Bullet F<JBE FDSJBFSFBS< FKHVKSFDHbSK AJFbSKDJFbS DKDFUbsEDKGJzdsbhgkjdzng",
-                    "Second One"
-                ],
-                "xPos": 50,
-                "yPos": 200,
-                "size": 60,
-                "spacing": 5,
-                "bulletType": "arrow",
-                "width": 600
-            }
-        ]
-    },
-    {
-        "slideName": "Question 1",
-        "slideType": "question",
-        "slideElements": [
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
             {
                 "type": "text",
-                "text": "How do we Stop Japan?",
-                "xPos": 0,
-                "yPos": 100,
-                "size": 100,
+                "text": "WW2 Overview",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
                 "modifiers": [
                     "h-center"
                 ]
             },
             {
-                "type": "text",
-                "text": "Directions",
-                "xPos": 50,
-                "yPos": 275,
-                "size": 70,
+                "type": "image",
+                "src": "images/Pacific_Front.jpg",
+                "xPos": 1300,
+                "yPos": 150,
+                "width": 1050,
+                "height": 760,
                 "modifiers": []
             },
             {
                 "type": "bullets",
                 "list": [
-                    "Type your response in the text box on your screen.",
-                    "Press the submit button when you are done."
+                    "America had to take over islands with fierce resistance.",
+                    "Major casualties on both sides."
                 ],
-                "xPos": 50,
-                "yPos": 350,
-                "size": 60,
-                "spacing": 50,
-                "bulletType": "number",
-                "width": 700
-            },
+                "xPos": 100,
+                "yPos": 285,
+                "size": 65,
+                "spacing": 25,
+                "bulletType": "circle",
+                "color": "black",
+                "width": 1300
+            }
+        ]
+    },
+    {
+        "slideName": "Hiroshima Bombing 2",
+        "slideType": "question",
+        "backgroundColor": "white",
+        "slideElements": [
             {
                 "type": "text",
-                "text": "Responses:",
-                "xPos": 1000,
-                "yPos": 275,
-                "size": 70,
+                "text": "Question Test",
+                "xPos": 50,
+                "yPos": 100,
+                "size": 60,
+                "color": "black",
                 "modifiers": []
-            },
-            {
-                "type": "response",
-                "parent": "Question 1",
-                "xPos": 800,
-                "yPos": 350,
-                "width": 1500,
-                "height": 750,
-                "size": 45
             }
         ]
     },
     {
         "slideName": "Shape Testing Slide",
         "slideType": "default",
+        "backgroundColor": "white",
         "slideElements": [
             {
                 "type": "text",
@@ -118,6 +333,7 @@
                 "xPos": 50,
                 "yPos": 100,
                 "size": 60,
+                "color": "black",
                 "modifiers": []
             },
             {
@@ -182,44 +398,61 @@
         ]
     },
     {
-        "slideName": "509th Composite Group",
-        "slideType": "default",
-        "slideElements": [
-            {
-                "type": "text",
-                "text": "The 509th Composite Group",
-                "xPos": 50,
-                "yPos": 100,
-                "size": 60,
-                "modifiers": []
-            }
-        ]
-    },
-    {
-        "slideName": "Hiroshima Bombing 1",
-        "slideType": "default",
-        "slideElements": [
-            {
-                "type": "text",
-                "text": "Hiroshima Bombing",
-                "xPos": 50,
-                "yPos": 100,
-                "size": 60,
-                "modifiers": []
-            }
-        ]
-    },
-    {
-        "slideName": "Hiroshima Bombing 2",
+        "slideName": "Question 1",
         "slideType": "question",
+        "backgroundColor": "white",
         "slideElements": [
             {
                 "type": "text",
-                "text": "Question Test",
-                "xPos": 50,
+                "text": "How do we Stop Japan?",
+                "xPos": 0,
                 "yPos": 100,
-                "size": 60,
+                "size": 100,
+                "color": "black",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "Directions",
+                "xPos": 50,
+                "yPos": 275,
+                "size": 70,
+                "color": "black",
                 "modifiers": []
+            },
+            {
+                "type": "bullets",
+                "list": [
+                    "Type your response in the text box on your screen.",
+                    "Press the submit button when you are done."
+                ],
+                "xPos": 50,
+                "yPos": 350,
+                "size": 60,
+                "spacing": 50,
+                "bulletType": "number",
+                "color": "black",
+                "width": 700
+            },
+            {
+                "type": "text",
+                "text": "Responses:",
+                "xPos": 1000,
+                "yPos": 275,
+                "size": 70,
+                "color": "black",
+                "modifiers": []
+            },
+            {
+                "type": "response",
+                "parent": "Question 1",
+                "xPos": 800,
+                "yPos": 350,
+                "width": 1500,
+                "height": 750,
+                "size": 45
             }
         ]
     }
