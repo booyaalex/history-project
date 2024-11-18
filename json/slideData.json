@@ -187,6 +187,69 @@
         ]
     },
     {
+        "slideName": "Overview 3",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Overview",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "bullets",
+                "list": [
+                    "Took place Aug 6th to Aug 9th, 1945.",
+                    "The two bombing sites were Hiroshima and Nagasaki.",
+                    "Around 200,000 total Japanese deaths."
+                ],
+                "xPos": 100,
+                "yPos": 285,
+                "size": 65,
+                "spacing": 25,
+                "bulletType": "circle",
+                "color": "black",
+                "width": 1300
+            }
+        ]
+    },
+    {
         "slideName": "Why?",
         "slideType": "default",
         "backgroundColor": "#a6a6ab",
@@ -297,10 +360,410 @@
                     "Major casualties on both sides."
                 ],
                 "xPos": 100,
-                "yPos": 285,
+                "yPos": 225,
                 "size": 65,
                 "spacing": 25,
                 "bulletType": "circle",
+                "color": "black",
+                "width": 1300
+            }
+        ]
+    },
+    {
+        "slideName": "WW2 Overview 2",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Two Options",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "1. Invade Japanese Homeland.",
+                "xPos": 50,
+                "yPos": 400,
+                "size": 65,
+                "color": "black",
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "2. Force Japanese to Surrender.",
+                "xPos": 1300,
+                "yPos": 400,
+                "size": 65,
+                "color": "black",
+                "modifiers": []
+            }
+        ]
+    },
+    {
+        "slideName": "WW2 Overview 3",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Japanese Soldiers",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "image",
+                "src": "images/Pacific_Front.jpg",
+                "xPos": 50,
+                "yPos": 150,
+                "width": 1050,
+                "height": 760,
+                "modifiers": []
+            },
+            {
+                "type": "bullets",
+                "list": [
+                    "Japanese believed that surrender was dishonorable.",
+                    "Japanese soldiers would fight until they were victorious or dead."
+                ],
+                "xPos": 1200,
+                "yPos": 225,
+                "size": 65,
+                "spacing": 25,
+                "bulletType": "circle",
+                "color": "black",
+                "width": 1300
+            }
+        ]
+    },
+    
+    {
+        "slideName": "WW2 Overview 2",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "What We Gonna Do?",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "1. Invade Japanese Homeland.",
+                "xPos": 50,
+                "yPos": 400,
+                "size": 65,
+                "color": "black",
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "2. Force Japanese to Surrender.",
+                "xPos": 1300,
+                "yPos": 400,
+                "size": 65,
+                "color": "black",
+                "modifiers": []
+            },
+            {
+              "type": "shape",
+                "shape": "line",
+                "x1": 1275,
+                "y1": 350,
+                "x2": 2375,
+                "y2": 400,
+                "width": 7,
+                "color": "red",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []  
+            },
+            {
+                "type": "shape",
+                  "shape": "line",
+                  "x1": 25,
+                  "y1": 350,
+                  "x2": 1075,
+                  "y2": 400,
+                  "width": 7,
+                  "color": "red",
+                  "stroke": {
+                      "color": "none",
+                      "width": 0
+                  },
+                  "modifiers": []  
+              }
+        ]
+    },
+    {
+        "slideName": "Potsdam Declaration 1",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Potsdam Declaration",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "image",
+                "src": "images/Potsdam_Meeting.jpg",
+                "xPos": 1350,
+                "yPos": 150,
+                "width": 1000,
+                "height": 760,
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "The declaration was a way for ",
+                "xPos": 100,
+                "yPos": 250,
+                "size": 65,
+                "color": "black",
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Japan to surrender without",
+                "xPos": 100,
+                "yPos": 305,
+                "size": 65,
+                "color": "black",
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "facing annilation.",
+                "xPos": 100,
+                "yPos": 360,
+                "size": 65,
+                "color": "black",
+                "modifiers": []
+            }
+        ]
+    },
+    {
+        "slideName": "Potsdam Declaration",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Potsdam Declaration",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "image",
+                "src": "images/Potsdam_Meeting.jpg",
+                "xPos": 1350,
+                "yPos": 150,
+                "width": 1000,
+                "height": 760,
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Terms:",
+                "xPos": 100,
+                "yPos": 250,
+                "size": 65,
+                "color": "black",
+                "modifiers": []
+            },
+            {
+                "type": "bullets",
+                "list": [
+                    "Removal of Japanese Athority",
+                    "Allied Occupation of Japan",
+                    "Removal of Japanese Millitary",
+                    "Adopt Democratic Beliefs(Freedom of Speech, Religion, etc)"
+                ],
+                "xPos": 100,
+                "yPos": 325,
+                "size": 65,
+                "spacing": 5,
+                "bulletType": "arrow",
                 "color": "black",
                 "width": 1300
             }
@@ -319,6 +782,54 @@
                 "size": 60,
                 "color": "black",
                 "modifiers": []
+            }
+        ]
+    },
+    {
+        "slideName": "Template",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Title_Goes_Here",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
             }
         ]
     },

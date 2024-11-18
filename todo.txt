@@ -26,3 +26,33 @@
     |☑| Have a space to accept/reject responses
         |☑| Make sure only current slide responses show up
 |☑| Do something other than sessionStorage
+
+
+
+
+|☑| Title
+|☑| Overview
+    |☑| When
+    |☑| Where
+|☑| Why
+    |☑| WW2 Overview
+    |☑| Crash Course on Japanese Soldiers
+| | How
+    |☑| Potsdam Declaration
+    | | 509th Composite Group
+    | | Hiroshima
+        | | Why Hiroshima?
+        | | Hiroshima Bombing
+        | | Aftermath
+    | | Nagasaki
+        | | WHY KOKURA?!?!?!?
+        | | Nagasaki Bombing
+        | | Aftermath/End of War
+| | Importance
+    | | Destructive Power of Nukes
+    | | Cold War
+| | Why I Chose Topic
+    | | I like learning about wars
+| | My Opinion
+    | | Necesarry To End War
+    | | Absolutely A War Crime
