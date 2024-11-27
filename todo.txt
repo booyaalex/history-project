@@ -39,10 +39,10 @@
     |☑| Crash Course on Japanese Soldiers
 | | How
     |☑| Potsdam Declaration
-    | | 509th Composite Group
+    |☑| 509th Composite Group
     | | Hiroshima
-        | | Why Hiroshima?
-        | | Hiroshima Bombing
+        |☑| Why Hiroshima?
+        |☑ | Hiroshima Bombing
         | | Aftermath
     | | Nagasaki
         | | WHY KOKURA?!?!?!?

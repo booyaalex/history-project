@@ -36,7 +36,7 @@
             },
             {
                 "type": "image",
-                "src": "https://cdnph.upi.com/ph/st/th/8051438702501/archives/upi/0a0fcbe6fb9556c99b5a003d9b1d7639/v1.5/Hiroshima-as-I-saw-it.jpg?lg=5&=1",
+                "src": "images/Hiroshima-as-I-saw-it.jpg",
                 "xPos": 0,
                 "yPos": 0,
                 "width": 1200,
@@ -757,7 +757,7 @@
                     "Removal of Japanese Athority",
                     "Allied Occupation of Japan",
                     "Removal of Japanese Millitary",
-                    "Adopt Democratic Beliefs(Freedom of Speech, Religion, etc)"
+                    "Adopt Freedom of Speech, Religion, etc"
                 ],
                 "xPos": 100,
                 "yPos": 325,
@@ -765,7 +765,293 @@
                 "spacing": 5,
                 "bulletType": "arrow",
                 "color": "black",
-                "width": 1300
+                "width": 1280
+            }
+        ]
+    },
+    {
+        "slideName": "509th Composite Group 1",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "509th Composite Group",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "image",
+                "src": "images/plane.jfif",
+                "xPos": 50,
+                "yPos": 150,
+                "width": 1350,
+                "height": 760,
+                "modifiers": [
+                    "h-center"
+                ]
+            }
+        ]
+    },
+    {
+        "slideName": "509th Composite Group 2",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "509th Composite Group",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "image",
+                "src": "images/509th-Composite-Group.webp",
+                "xPos": 1250,
+                "yPos": 150,
+                "width": 1100,
+                "height": 760,
+                "modifiers": []
+            },
+            {
+                "type": "bullets",
+                "list": [
+                    "Elite Combat Unit Created For Nuclear Bombing",
+                    "Made up of 7 Crews",
+                    "Led by Paul Tibbits"
+                ],
+                "xPos": 100,
+                "yPos": 250,
+                "size": 65,
+                "spacing": 5,
+                "bulletType": "circle",
+                "color": "black",
+                "width": 1280
+            }
+        ]
+    },
+    {
+        "slideName": "Why Hiroshima",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Hiroshima",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "Why Hiroshima?",
+                "xPos": 100,
+                "yPos": 250,
+                "size": 65,
+                "color": "black",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "bullets",
+                "list": [
+                    "Display of Power",
+                    "Millitary Target",
+                    "Untouched by American Bombing"
+                ],
+                "xPos": 50,
+                "yPos": 375,
+                "size": 65,
+                "spacing": 5,
+                "bulletType": "number",
+                "color": "black",
+                "width": 1280
+            }
+        ]
+    },
+    {
+        "slideName": "Hiroshima Bombing",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Hiroshima",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "The Bombing",
+                "xPos": 425,
+                "yPos": 250,
+                "size": 65,
+                "color": "black",
+                "modifiers": []
+            },
+            {
+                "type": "image",
+                "src": "images/Hiroshima-as-I-saw-it.jpg",
+                "xPos": 1250,
+                "yPos": 150,
+                "width": 1100,
+                "height": 760,
+                "modifiers": []
+            },
+            {
+                "type": "bullets",
+                "list": [
+                    "Aug 6th, 08:16 Hours",
+                    "60K Died Instantly",
+                    "Survivors Suffered From Burns and Radiation"
+                ],
+                "xPos": 50,
+                "yPos": 375,
+                "size": 65,
+                "spacing": 5,
+                "bulletType": "square",
+                "color": "black",
+                "width": 1280
             }
         ]
     },
