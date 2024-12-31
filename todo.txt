@@ -40,13 +40,13 @@
 | | How
     |☑| Potsdam Declaration
     |☑| 509th Composite Group
-    | | Hiroshima
+    |☑| Hiroshima
         |☑| Why Hiroshima?
-        |☑ | Hiroshima Bombing
-        | | Aftermath
+        |☑| Hiroshima Bombing
+        |☑| Aftermath
     | | Nagasaki
-        | | WHY KOKURA?!?!?!?
-        | | Nagasaki Bombing
+        |☑| WHY KOKURA?!?!?!?
+        |☑| Nagasaki Bombing
         | | Aftermath/End of War
 | | Importance
     | | Destructive Power of Nukes

@@ -491,13 +491,22 @@
                 "modifiers": []
             },
             {
+                "type": "text",
+                "text": "Fought Until Victory or Death",
+                "xPos": 1325,
+                "yPos": 225,
+                "size": 65,
+                "color": "black",
+                "modifiers": []
+            },
+            {
                 "type": "bullets",
                 "list": [
-                    "Japanese believed that surrender was dishonorable.",
-                    "Japanese soldiers would fight until they were victorious or dead."
+                    "Surrender was considered dishonorable.",
+                    "Japanese feared US Marines."
                 ],
                 "xPos": 1200,
-                "yPos": 225,
+                "yPos": 325,
                 "size": 65,
                 "spacing": 25,
                 "bulletType": "circle",
@@ -949,13 +958,20 @@
             {
                 "type": "text",
                 "text": "Why Hiroshima?",
-                "xPos": 100,
+                "xPos": 400,
                 "yPos": 250,
                 "size": 65,
                 "color": "black",
-                "modifiers": [
-                    "h-center"
-                ]
+                "modifiers": []
+            },
+            {
+                "type": "image",
+                "src": "images/hiroshima_map.webp",
+                "xPos": 1300,
+                "yPos": 200,
+                "width": 900,
+                "height": 625,
+                "modifiers": []
             },
             {
                 "type": "bullets",
@@ -964,13 +980,13 @@
                     "Millitary Target",
                     "Untouched by American Bombing"
                 ],
-                "xPos": 50,
+                "xPos": 250,
                 "yPos": 375,
                 "size": 65,
                 "spacing": 5,
-                "bulletType": "number",
+                "bulletType": "circle",
                 "color": "black",
-                "width": 1280
+                "width": 1000
             }
         ]
     },
@@ -1045,13 +1061,249 @@
                     "60K Died Instantly",
                     "Survivors Suffered From Burns and Radiation"
                 ],
-                "xPos": 50,
+                "xPos": 250,
                 "yPos": 375,
                 "size": 65,
                 "spacing": 5,
                 "bulletType": "square",
                 "color": "black",
+                "width": 1000
+            }
+        ]
+    },
+    {
+        "slideName": "Hiroshima Aftermath",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Hiroshima",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "Aftermath",
+                "xPos": 100,
+                "yPos": 250,
+                "size": 65,
+                "color": "black",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "bullets",
+                "list": [
+                    "Japanese Considered Surrender",
+                    "President Truman Gave Speech",
+                    "Preparations for Next Bombing"
+                ],
+                "xPos": 50,
+                "yPos": 375,
+                "size": 65,
+                "spacing": 5,
+                "bulletType": "circle",
+                "color": "black",
                 "width": 1280
+            }
+        ]
+    },
+    {
+        "slideName": "What's a Kokura?",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Nagasaki",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "image",
+                "src": "images/kokura_map.jpg",
+                "xPos": 1300,
+                "yPos": 200,
+                "width": 900,
+                "height": 625,
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Original Target: Kokura",
+                "xPos": 275,
+                "yPos": 250,
+                "size": 65,
+                "color": "black",
+                "modifiers": []
+            },
+            {
+                "type": "bullets",
+                "list": [
+                    "Home to Millitary Arsenal",
+                    "Produced Weapons",
+                    "Target Changed due to Weather"
+                ],
+                "xPos": 250,
+                "yPos": 375,
+                "size": 65,
+                "spacing": 5,
+                "bulletType": "circle",
+                "color": "black",
+                "width": 1000
+            }
+        ]
+    },
+    {
+        "slideName": "Nagasaki Bombing",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Nagasaki",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "The Bombing",
+                "xPos": 425,
+                "yPos": 250,
+                "size": 65,
+                "color": "black",
+                "modifiers": []
+            },
+            {
+                "type": "image",
+                "src": "images/nagasaki_bombing.webp",
+                "xPos": 1250,
+                "yPos": 150,
+                "width": 1100,
+                "height": 760,
+                "modifiers": []
+            },
+            {
+                "type": "bullets",
+                "list": [
+                    "Aug 9th, 11:02 Hours",
+                    "40K Died Instantly",
+                    "60K More Injured"
+                ],
+                "xPos": 250,
+                "yPos": 375,
+                "size": 65,
+                "spacing": 5,
+                "bulletType": "square",
+                "color": "black",
+                "width": 1000
             }
         ]
     },
