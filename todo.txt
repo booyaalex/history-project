@@ -44,10 +44,10 @@
         |☑| Why Hiroshima?
         |☑| Hiroshima Bombing
         |☑| Aftermath
-    | | Nagasaki
+    |☑| Nagasaki
         |☑| WHY KOKURA?!?!?!?
         |☑| Nagasaki Bombing
-        | | Aftermath/End of War
+        |☑| Aftermath/End of War
 | | Importance
     | | Destructive Power of Nukes
     | | Cold War

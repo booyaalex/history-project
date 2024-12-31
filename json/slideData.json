@@ -1308,6 +1308,88 @@
         ]
     },
     {
+        "slideName": "Nagasaki Aftermath",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Nagasaki",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "Aftermath",
+                "xPos": 100,
+                "yPos": 250,
+                "size": 65,
+                "color": "black",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "image",
+                "src": "images/surrender.jpg",
+                "xPos": 1250,
+                "yPos": 300,
+                "width": 1100,
+                "height": 560,
+                "modifiers": []
+            },
+            {
+                "type": "bullets",
+                "list": [
+                    "Emperor Hirohito Surrendered",
+                    "Official Surrender on Sep 2, 1945"
+                ],
+                "xPos": 50,
+                "yPos": 375,
+                "size": 65,
+                "spacing": 50,
+                "bulletType": "arrow",
+                "color": "black",
+                "width": 1280
+            }
+        ]
+    },
+    {
         "slideName": "Hiroshima Bombing 2",
         "slideType": "question",
         "backgroundColor": "white",
