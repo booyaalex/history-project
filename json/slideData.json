@@ -515,7 +515,6 @@
             }
         ]
     },
-    
     {
         "slideName": "WW2 Overview 2",
         "slideType": "default",
@@ -1386,6 +1385,87 @@
                 "bulletType": "arrow",
                 "color": "black",
                 "width": 1280
+            }
+        ]
+    },
+    {
+        "slideName": "Importance",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Historical Importance",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "1. Swiftly Ended WW2",
+                "xPos": 50,
+                "yPos": 350,
+                "size": 65,
+                "color": "black",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "2. Displayed Destructive Power",
+                "xPos": 1300,
+                "yPos": 500,
+                "size": 65,
+                "color": "black",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "3. Cold War & Arms Race",
+                "xPos": 50,
+                "yPos": 650,
+                "size": 65,
+                "color": "black",
+                "modifiers": [
+                    "h-center"
+                ]
             }
         ]
     },
