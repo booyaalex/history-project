@@ -1470,18 +1470,372 @@
         ]
     },
     {
-        "slideName": "Hiroshima Bombing 2",
+        "slideName": "Why I Chose Topic 1",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Why This Topic?",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 100,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center",
+                    "v-center"
+                ]
+            }
+        ]
+    },
+    {
+        "slideName": "Why I Chose Topic 2",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Why This Topic?",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "• I Enjoy Learning About Wars •",
+                "xPos": 50,
+                "yPos": 350,
+                "size": 65,
+                "color": "black",
+                "modifiers": [
+                    "h-center"
+                ]
+            }
+        ]
+    },
+    {
+        "slideName": "Why I Chose Topic 3",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Why This Topic?",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "• I Enjoy Learning About Wars •",
+                "xPos": 50,
+                "yPos": 350,
+                "size": 65,
+                "color": "black",
+                "modifiers": [
+                    "h-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "• Kablooey •",
+                "xPos": 50,
+                "yPos": 450,
+                "size": 65,
+                "color": "black",
+                "modifiers": [
+                    "h-center"
+                ]
+            }
+        ]
+    },
+    {
+        "slideName": "My Opinion 1",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "My Opinion?",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 100,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center",
+                    "v-center"
+                ]
+            }
+        ]
+    },
+    {
+        "slideName": "My Opinion 2",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Absolutly a War Crime",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 100,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center",
+                    "v-center"
+                ]
+            }
+        ]
+    },
+    {
+        "slideName": "My Opinion 2",
+        "slideType": "default",
+        "backgroundColor": "#a6a6ab",
+        "slideElements": [
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 40,
+                "x2": 2400,
+                "y2": 40,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "shape",
+                "shape": "line",
+                "x1": 0,
+                "y1": 920,
+                "x2": 2400,
+                "y2": 920,
+                "width": 7,
+                "color": "#64656e",
+                "stroke": {
+                    "color": "none",
+                    "width": 0
+                },
+                "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Absolutly a War Crime",
+                "xPos": 50,
+                "yPos": 125,
+                "size": 100,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center",
+                    "v-center"
+                ]
+            },
+            {
+                "type": "text",
+                "text": "But Nessesary",
+                "xPos": 50,
+                "yPos": 550,
+                "size": 75,
+                "color": "#472159",
+                "modifiers": [
+                    "h-center"
+                ]
+            }
+        ]
+    },
+    {
+        "slideName": "Questions?",
         "slideType": "question",
         "backgroundColor": "white",
         "slideElements": [
             {
                 "type": "text",
-                "text": "Question Test",
+                "text": "Questions?",
                 "xPos": 50,
                 "yPos": 100,
                 "size": 60,
                 "color": "black",
                 "modifiers": []
+            },
+            {
+                "type": "text",
+                "text": "Questions:",
+                "xPos": 1000,
+                "yPos": 275,
+                "size": 70,
+                "color": "black",
+                "modifiers": []
+            },
+            {
+                "type": "response",
+                "parent": "Question 1",
+                "xPos": 800,
+                "yPos": 350,
+                "width": 1500,
+                "height": 750,
+                "size": 45
             }
         ]
     },
@@ -1646,24 +2000,6 @@
                 "bulletType": "number",
                 "color": "black",
                 "width": 700
-            },
-            {
-                "type": "text",
-                "text": "Responses:",
-                "xPos": 1000,
-                "yPos": 275,
-                "size": 70,
-                "color": "black",
-                "modifiers": []
-            },
-            {
-                "type": "response",
-                "parent": "Question 1",
-                "xPos": 800,
-                "yPos": 350,
-                "width": 1500,
-                "height": 750,
-                "size": 45
             }
         ]
     }
