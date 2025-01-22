@@ -20,6 +20,9 @@ main {
 
 footer {
     margin: 10px;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
 }
 
 #myCanvas {
