@@ -1,6 +1,7 @@
 let current_slide = 5;
 let slide_data_array = [];
 var audio = new Audio('../Outro-Music-Meme-Sound-Effect.mp3');
+var audio2 = new Audio('../ding-126626.mp3');
 
 const firebaseConfig = {
     apiKey: "AIzaSyDspsa0eeswdZX91YWGg3uygsxmgiqvhd8",
@@ -401,6 +402,15 @@ db.ref("/Slide").on("value", function (snapshot) {
     }
 
     updateSlide();
+});
+
+db.ref("/Sound").on("value", function (snapshot) {
+    if(window.location.pathname == "/slideshow") {
+        audio2.play();
+    } else {
+        audio2.currentTime = 0;
+        audio2.pause();
+    }
 });
 
 function createFunName() {

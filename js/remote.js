@@ -11,6 +11,7 @@ firebase.initializeApp(secondFirebaseConfig);
 const db = firebase.database();
 
 var current_slide = 0;
+var sound = 0;
 let slide_data_array = [];
 
 
@@ -42,7 +43,7 @@ async function getSlideshowData() {
 getSlideshowData();
 
 db.ref("/Slide").on("value", function (snapshot) {
-    current_slide = snapshot.val().slide;
+    current_slide = snapshot.val().slide
     db.ref("/UserResponses").on("value", function (snapshot) {
         const response_box = document.getElementById("responseBox");
         response_box.innerHTML = "";
@@ -72,5 +73,11 @@ function acceptResponse(key) {
 function rejectResponse(key) {
     db.ref("/UserResponses").child(slide_data_array[current_slide].slideName).child(key).update({
         accepted: 2
+    });
+}
+
+function soundTest() {
+    db.ref("/Sound").update({
+        slide: ++sound
     });
 }
