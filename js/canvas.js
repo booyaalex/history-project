@@ -1,5 +1,6 @@
 let current_slide = 5;
 let slide_data_array = [];
+var audio = new Audio('../Outro-Music-Meme-Sound-Effect.mp3');
 
 const firebaseConfig = {
     apiKey: "AIzaSyDspsa0eeswdZX91YWGg3uygsxmgiqvhd8",
@@ -377,11 +378,28 @@ getSlideshowData().then(() => {
     board.width = Math.floor(board.width * window.devicePixelRatio);
     board.height = Math.floor((board.width / 2.5));
 
+    if(slide_data_array[current_slide].slideName == "OUTRO") {
+        console.log("good");
+        var audio = new Audio('../Outro-Music-Meme-Sound-Effect.mp3');
+        audio.play();
+    }
+
     updateSlide();
 });
 
 db.ref("/Slide").on("value", function (snapshot) {
     current_slide = snapshot.val().slide;
+
+    if(slide_data_array[current_slide].slideName == "OUTRO") {
+        console.log("good");
+        
+        audio.play();
+    } 
+    else {
+        audio.currentTime = 14;
+        audio.pause();
+    }
+
     updateSlide();
 });
 
