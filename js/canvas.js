@@ -303,7 +303,7 @@ const drawing = {
                 },
                 length: Math.sqrt(Math.pow((element.x2 - element.x1), 2) + Math.pow((element.y2 - element.y1), 2)) - 75,
                 angle: Math.atan2((element.y2 - element.y1), (element.x2 - element.x1)),
-                points: [ null, null, null, { x: element.x2, y: element.y2 }, null, null, null ]
+                points: [null, null, null, { x: element.x2, y: element.y2 }, null, null, null]
             };
 
             //Get Arrow Points
@@ -335,7 +335,7 @@ const drawing = {
             //Display Element
             ctx.beginPath();
             ctx.fillStyle = arrow.color;
-            for(let i = 0; i < 7; i++) {
+            for (let i = 0; i < 7; i++) {
                 ctx.lineTo(arrow.points[i].x, arrow.points[i].y);
             }
             ctx.lineTo(arrow.points[0].x, arrow.points[0].y);
@@ -345,7 +345,7 @@ const drawing = {
                 ctx.lineWidth = arrow.stroke.width;
                 ctx.stroke();
             }
-            
+
         }
     }
 }
@@ -379,7 +379,7 @@ getSlideshowData().then(() => {
     board.width = Math.floor(board.width * window.devicePixelRatio);
     board.height = Math.floor((board.width / 2.5));
 
-    if(slide_data_array[current_slide].slideName == "OUTRO") {
+    if (slide_data_array[current_slide].slideName == "OUTRO") {
         console.log("good");
         var audio = new Audio('../Outro-Music-Meme-Sound-Effect.mp3');
         audio.play();
@@ -391,11 +391,11 @@ getSlideshowData().then(() => {
 db.ref("/Slide").on("value", function (snapshot) {
     current_slide = snapshot.val().slide;
 
-    if(slide_data_array[current_slide].slideName == "OUTRO") {
+    if (slide_data_array[current_slide].slideName == "OUTRO") {
         console.log("good");
-        
+
         audio.play();
-    } 
+    }
     else {
         audio.currentTime = 14;
         audio.pause();
@@ -405,7 +405,7 @@ db.ref("/Slide").on("value", function (snapshot) {
 });
 
 db.ref("/Sound").on("value", function (snapshot) {
-    if(window.location.pathname == "/slideshow") {
+    if (window.location.pathname == "/slideshow") {
         audio2.play();
     } else {
         audio2.currentTime = 0;
@@ -421,6 +421,7 @@ function createFunName() {
 }
 
 document.addEventListener("visibilitychange", () => {
-    console.log(document.hidden);
-    // Modify behavior…
+    if(document.hidden) {
+        alert("Please stay on the Project :)");
+    }
 });
