@@ -422,6 +422,6 @@ function createFunName() {
 
 document.addEventListener("visibilitychange", () => {
     if(document.hidden) {
-        alert("Please stay on the Project :)");
+        alert("Please stay on the Project, don't leave me :(");
     }
 });
