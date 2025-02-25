@@ -27,7 +27,7 @@
         |☑| Make sure only current slide responses show up
 |☑| Do something other than sessionStorage
 
-
+☑
 
 
 |☑| Title
